@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34330.188
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FireAlert", "FireAlert\FireAlert.csproj", "{57AAD782-FE01-4108-9ABB-5E177B171819}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{57AAD782-FE01-4108-9ABB-5E177B171819}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{57AAD782-FE01-4108-9ABB-5E177B171819}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{57AAD782-FE01-4108-9ABB-5E177B171819}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{57AAD782-FE01-4108-9ABB-5E177B171819}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {ACA6C9F2-5076-43AC-B71A-2B86B131645E}
+	EndGlobalSection
+EndGlobal

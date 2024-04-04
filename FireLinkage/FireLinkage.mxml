@@ -1,0 +1,855 @@
+<!--mPythonType:0-->
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="{XU#mI`8)cEfyM:w|hih">place</variable>
+    <variable id="m98:wwWg3q^E.MD!*5Zu">alert</variable>
+    <variable id="]}4E]t*)?}+Rs1Ic2B|m">topicSmoke</variable>
+    <variable id="wWaWr5Mpu/k;1.wWGRsE">topicFire</variable>
+    <variable id="2yJMX_W%xH^d=Y2n]U^-">topicAlertPlace</variable>
+    <variable id="7bpCyReeAjG{*!9uq+{h">smoke</variable>
+    <variable id="gzqhB_rk{|op|VzVvV:7">fire</variable>
+  </variables>
+  <block type="mpython_main" id="3/;h{]1sgj4v2@u@;pb/" x="412" y="63">
+    <next>
+      <block type="variables_set" id="@qF+)bWN$vsFes`rwGk!">
+        <field name="VAR" id="{XU#mI`8)cEfyM:w|hih">place</field>
+        <value name="VALUE">
+          <block type="text" id="}QC6),m?v`!pS39xx/_V">
+            <field name="TEXT">A</field>
+          </block>
+        </value>
+        <next>
+          <block type="variables_set" id="!yR=x9IU8@i*M0[rhpHe">
+            <field name="VAR" id="m98:wwWg3q^E.MD!*5Zu">alert</field>
+            <value name="VALUE">
+              <block type="text" id="kaP9i1QmD:G?q(#Uo^)O">
+                <field name="TEXT"></field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="w#@_v^_qb%v8R(lf-*Sg">
+                <field name="VAR" id="]}4E]t*)?}+Rs1Ic2B|m">topicSmoke</field>
+                <value name="VALUE">
+                  <block type="text" id="#~@x1x|$z*IDytT;p#YR">
+                    <field name="TEXT">FireLinkage/Smoke1</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="variables_set" id="hKv1DbiS[I|U/4`vM?c(">
+                    <field name="VAR" id="wWaWr5Mpu/k;1.wWGRsE">topicFire</field>
+                    <value name="VALUE">
+                      <block type="text" id="]%7(-/#BS]pEM?jCk:CJ">
+                        <field name="TEXT">FireLinkage/Fire1</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="variables_set" id="0Px8l}l0U*mQR]3Sj$;P">
+                        <field name="VAR" id="2yJMX_W%xH^d=Y2n]U^-">topicAlertPlace</field>
+                        <value name="VALUE">
+                          <block type="text" id="o$.qOQ=ojk{WO_I2n/!+">
+                            <field name="TEXT">FireLinkage/AlertPlace</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="mpython_display_fill" id="yu1/7(Cww?Hl}:q:QiYg">
+                            <field name="display_fill">fill(0)</field>
+                            <next>
+                              <block type="mpython_display_DispChar_5lines" id="avaK^+qDqnYQVyX%5l0o">
+                                <field name="TEXTMODE">1</field>
+                                <field name="AUTORETURN">False</field>
+                                <value name="DispChar_5lines">
+                                  <shadow type="mpython_4_lines" id="0]A!!In?N=fGtGq+q*|O">
+                                    <field name="mpython_4_lines">2</field>
+                                  </shadow>
+                                </value>
+                                <value name="message">
+                                  <shadow type="text" id="!2OyqgP!,SWU[6ESfy/x">
+                                    <field name="TEXT">火警联动（初始化……）</field>
+                                  </shadow>
+                                </value>
+                                <next>
+                                  <block type="mpython_display_Show" id="e;Y3%Zb[}F|@iC=ew(RX">
+                                    <next>
+                                      <block type="mpython3_init_wifi" id="T|6P0VcW@{yH^]D9B$Yh">
+                                        <field name="ssid">XxcWiFi</field>
+                                        <field name="password"></field>
+                                        <next>
+                                          <block type="mpython3_ntptime_settime" id="+Q:s$6=ZU}HFd[+Fd{Pt">
+                                            <field name="timezone">8</field>
+                                            <value name="server">
+                                              <block type="mpython_ntp_server" id="oMjpqYKvUMPUBvF8Pco=">
+                                                <field name="SERVER">"time.windows.com"</field>
+                                              </block>
+                                            </value>
+                                            <next>
+                                              <block type="mpython_siot_connect" id="9Ee4Yp0gr%y+$+Ef[X8}">
+                                                <value name="CLIENT_ID">
+                                                  <shadow type="text" id="?M0SPH|_cj_V.[=)$Dl=">
+                                                    <field name="TEXT">FireAlert-A</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="SERVER">
+                                                  <shadow type="text" id="1UA}#JY-O8W)E7Vg$8(w">
+                                                    <field name="TEXT">mqtt.qhdyz.com.cn</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="IOT_USER">
+                                                  <shadow type="text" id="R/-j%hu!*?r^e@]M#fjg">
+                                                    <field name="TEXT">siot</field>
+                                                  </shadow>
+                                                </value>
+                                                <value name="IOT_PWD">
+                                                  <shadow type="text" id="Y*fkwS+I,%v-b[)247:F">
+                                                    <field name="TEXT">dfrobot</field>
+                                                  </shadow>
+                                                </value>
+                                                <next>
+                                                  <block type="mpython_siot_subscribe" id="~2pajYF.W1yH?ecGA-/)">
+                                                    <mutation xmlns="http://www.w3.org/1999/xhtml" items="3"></mutation>
+                                                    <value name="ADD0">
+                                                      <block type="variables_get" id="ghMn2@B~V`tzjt)Yhrq/">
+                                                        <field name="VAR" id="]}4E]t*)?}+Rs1Ic2B|m">topicSmoke</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD1">
+                                                      <block type="variables_get" id="(dEr$Vlxg=4zt5]G6A%6">
+                                                        <field name="VAR" id="wWaWr5Mpu/k;1.wWGRsE">topicFire</field>
+                                                      </block>
+                                                    </value>
+                                                    <value name="ADD2">
+                                                      <block type="variables_get" id="{Y{n:c)qS-+n-!LrK`Sm">
+                                                        <field name="VAR" id="2yJMX_W%xH^d=Y2n]U^-">topicAlertPlace</field>
+                                                      </block>
+                                                    </value>
+                                                    <next>
+                                                      <block type="RGB_LED_init" id=",|-%|K1BaI[l#056g}Ze">
+                                                        <field name="neopixel_name">my_rgb</field>
+                                                        <value name="analogP_IO">
+                                                          <shadow type="pwm_pin" id="i)HHZLoveEH}B+=L]xqn">
+                                                            <field name="pwm_pin">13</field>
+                                                          </shadow>
+                                                        </value>
+                                                        <next>
+                                                          <block type="RGB_LED_all_gui" id="8u#Lb3AD%9CWe$i~94tW">
+                                                            <field name="neopixel_name">my_rgb</field>
+                                                            <field name="COLOUR">#33cc00</field>
+                                                            <next>
+                                                              <block type="RGB_LED_show" id="FTMj-M)q]LxJE=((pdw6">
+                                                                <field name="neopixel_name">my_rgb</field>
+                                                                <next>
+                                                                  <block type="microbit_music_stop" id="Qu*$%X;rVdP.PLlzoo/U">
+                                                                    <value name="pin">
+                                                                      <shadow type="mpython_music_pin_p6" id="1ov2i*.;*|5y=$sM/NXv">
+                                                                        <field name="music_pin">15</field>
+                                                                      </shadow>
+                                                                    </value>
+                                                                    <next>
+                                                                      <block type="mpython_display_fill" id="VKqVGPUe:RLJvf$,h2)M">
+                                                                        <field name="display_fill">fill(0)</field>
+                                                                        <next>
+                                                                          <block type="mpython_display_DispChar_5lines" id=".F84d?h_.muf,LNQhWB[">
+                                                                            <field name="TEXTMODE">1</field>
+                                                                            <field name="AUTORETURN">False</field>
+                                                                            <value name="DispChar_5lines">
+                                                                              <shadow type="mpython_4_lines" id="vkgB$_+VSmSF.#N.2u44">
+                                                                                <field name="mpython_4_lines">1</field>
+                                                                              </shadow>
+                                                                            </value>
+                                                                            <value name="message">
+                                                                              <shadow type="text" id="nx|*)+Jn%Cawrjd1$[PN">
+                                                                                <field name="TEXT">  火警联动（状态正常）</field>
+                                                                              </shadow>
+                                                                            </value>
+                                                                            <next>
+                                                                              <block type="mpython_display_Show" id="(U~!}.$.BXhlLI04q:AS">
+                                                                                <next>
+                                                                                  <block type="controls_repeat_forever" id="lpcJ;3{jN/E6-XwrfUH[">
+                                                                                    <statement name="DO">
+                                                                                      <block type="variables_set" id=".ERkcO?/?[i[BcG],Jj%">
+                                                                                        <field name="VAR" id="7bpCyReeAjG{*!9uq+{h">smoke</field>
+                                                                                        <value name="VALUE">
+                                                                                          <block type="mpython_read_analog" id="y|m9.VF{6#dZ*,Zl=cnc">
+                                                                                            <value name="allPin">
+                                                                                              <shadow type="read_analog_pin" id=";P;fRWHa[Rx7Uo$GPVOk">
+                                                                                                <field name="read_analog_pin">0</field>
+                                                                                              </shadow>
+                                                                                            </value>
+                                                                                          </block>
+                                                                                        </value>
+                                                                                        <next>
+                                                                                          <block type="variables_set" id="iZ;2x@Pb$5=Rz^2J)Gk]">
+                                                                                            <field name="VAR" id="gzqhB_rk{|op|VzVvV:7">fire</field>
+                                                                                            <value name="VALUE">
+                                                                                              <block type="mpython_read_analog" id="NnYBp|R!TM**Cox;wF?x">
+                                                                                                <value name="allPin">
+                                                                                                  <shadow type="read_analog_pin" id="(|A?:lYSW@PjVl%-pc`[">
+                                                                                                    <field name="read_analog_pin">1</field>
+                                                                                                  </shadow>
+                                                                                                </value>
+                                                                                              </block>
+                                                                                            </value>
+                                                                                            <next>
+                                                                                              <block type="mpython_clear_dispchar_5lines" id="mO]2s@4+K;?$YzZ-4Q}o">
+                                                                                                <value name="DispChar_5lines">
+                                                                                                  <shadow type="mpython_4_lines" id=",Y[tr)n4qsk3@_-RZEUx">
+                                                                                                    <field name="mpython_4_lines">2</field>
+                                                                                                  </shadow>
+                                                                                                </value>
+                                                                                                <next>
+                                                                                                  <block type="mpython_display_DispChar_5lines" id="v^tbi!$iqdvV*4^=s?yf">
+                                                                                                    <field name="TEXTMODE">1</field>
+                                                                                                    <field name="AUTORETURN">False</field>
+                                                                                                    <value name="DispChar_5lines">
+                                                                                                      <shadow type="mpython_4_lines" id="0-vMM:FDCf3r9+)x.?Re">
+                                                                                                        <field name="mpython_4_lines">2</field>
+                                                                                                      </shadow>
+                                                                                                    </value>
+                                                                                                    <value name="message">
+                                                                                                      <shadow type="text" id="tgc1hFt.0|g3WV$tms9J">
+                                                                                                        <field name="TEXT">Hello, world!</field>
+                                                                                                      </shadow>
+                                                                                                      <block type="text_append_text" id="zg{6P}9RdP]fdL8V.ej]">
+                                                                                                        <value name="text_abc">
+                                                                                                          <shadow type="text" id=")|H#Ff3^NDyMiTr=+[|i">
+                                                                                                            <field name="TEXT">烟雾: </field>
+                                                                                                          </shadow>
+                                                                                                        </value>
+                                                                                                        <value name="append_text">
+                                                                                                          <shadow type="text" id="4W!8BJY.6gq1N9^v^VrS">
+                                                                                                            <field name="TEXT">def</field>
+                                                                                                          </shadow>
+                                                                                                          <block type="variables_get" id="N1EGGIyXT;_ny7-/|lfA">
+                                                                                                            <field name="VAR" id="7bpCyReeAjG{*!9uq+{h">smoke</field>
+                                                                                                          </block>
+                                                                                                        </value>
+                                                                                                      </block>
+                                                                                                    </value>
+                                                                                                    <next>
+                                                                                                      <block type="mpython_clear_dispchar_5lines" id="yZUKVuEAU%#O#S,0S7L}">
+                                                                                                        <value name="DispChar_5lines">
+                                                                                                          <shadow type="mpython_4_lines" id="l-iJ2yY:YOuCMOwRwtZH">
+                                                                                                            <field name="mpython_4_lines">3</field>
+                                                                                                          </shadow>
+                                                                                                        </value>
+                                                                                                        <next>
+                                                                                                          <block type="mpython_display_DispChar_5lines" id="ZcPuqzajC`sDl631GFDq">
+                                                                                                            <field name="TEXTMODE">1</field>
+                                                                                                            <field name="AUTORETURN">False</field>
+                                                                                                            <value name="DispChar_5lines">
+                                                                                                              <shadow type="mpython_4_lines" id="ee$XDy^2+Vp9{39Vz!2]">
+                                                                                                                <field name="mpython_4_lines">3</field>
+                                                                                                              </shadow>
+                                                                                                            </value>
+                                                                                                            <value name="message">
+                                                                                                              <shadow type="text">
+                                                                                                                <field name="TEXT">Hello, world!</field>
+                                                                                                              </shadow>
+                                                                                                              <block type="text_append_text" id=";O;wViX79$t+|Pn`%O,G">
+                                                                                                                <value name="text_abc">
+                                                                                                                  <shadow type="text" id="J9w|ChhM/uz}#zbO.V,q">
+                                                                                                                    <field name="TEXT">火焰: </field>
+                                                                                                                  </shadow>
+                                                                                                                </value>
+                                                                                                                <value name="append_text">
+                                                                                                                  <shadow type="text">
+                                                                                                                    <field name="TEXT">def</field>
+                                                                                                                  </shadow>
+                                                                                                                  <block type="variables_get" id="CYqB7d/@X:n4!F|1pmih">
+                                                                                                                    <field name="VAR" id="gzqhB_rk{|op|VzVvV:7">fire</field>
+                                                                                                                  </block>
+                                                                                                                </value>
+                                                                                                              </block>
+                                                                                                            </value>
+                                                                                                            <next>
+                                                                                                              <block type="mpython_display_Show" id="l1B%FY6_wr%C/9(3xME,">
+                                                                                                                <next>
+                                                                                                                  <block type="mpython_siot_publish_to" id=",#/OeR^CERWV/bhH9VH-">
+                                                                                                                    <value name="MESSAGE">
+                                                                                                                      <shadow type="text" id="=[*%xBFRHiFN[/B2!+1k">
+                                                                                                                        <field name="TEXT"></field>
+                                                                                                                      </shadow>
+                                                                                                                      <block type="variables_get" id="_4JPdIJU%Ku[tajz{viZ">
+                                                                                                                        <field name="VAR" id="7bpCyReeAjG{*!9uq+{h">smoke</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <value name="TOPIC">
+                                                                                                                      <shadow type="text" id="cWc8_Sd8qJ^]!N/Y/Cx]">
+                                                                                                                        <field name="TEXT"></field>
+                                                                                                                      </shadow>
+                                                                                                                      <block type="variables_get" id="X)KR?O2PhkZ!h^RExC=u">
+                                                                                                                        <field name="VAR" id="]}4E]t*)?}+Rs1Ic2B|m">topicSmoke</field>
+                                                                                                                      </block>
+                                                                                                                    </value>
+                                                                                                                    <next>
+                                                                                                                      <block type="mpython_siot_publish_to" id="Qh+Qc?V#Ai~A07=Mq$Xb">
+                                                                                                                        <value name="MESSAGE">
+                                                                                                                          <shadow type="text">
+                                                                                                                            <field name="TEXT"></field>
+                                                                                                                          </shadow>
+                                                                                                                          <block type="variables_get" id="WGjWXAsS/Yca9SYzu5GB">
+                                                                                                                            <field name="VAR" id="gzqhB_rk{|op|VzVvV:7">fire</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <value name="TOPIC">
+                                                                                                                          <shadow type="text">
+                                                                                                                            <field name="TEXT"></field>
+                                                                                                                          </shadow>
+                                                                                                                          <block type="variables_get" id="WZT8lE}UOiJG]mSt|1#R">
+                                                                                                                            <field name="VAR" id="wWaWr5Mpu/k;1.wWGRsE">topicFire</field>
+                                                                                                                          </block>
+                                                                                                                        </value>
+                                                                                                                        <next>
+                                                                                                                          <block type="controls_if" id="dSfgRcPPY6CC.M?`(r#q">
+                                                                                                                            <mutation else="1"></mutation>
+                                                                                                                            <value name="IF0">
+                                                                                                                              <block type="logic_operation" id="NiFt{7=XZ!|Cr*#qpV+^">
+                                                                                                                                <field name="OP">OR</field>
+                                                                                                                                <value name="A">
+                                                                                                                                  <block type="logic_compare" id="AW^5kiVqS=reOO5SLgVH">
+                                                                                                                                    <field name="OP">GTE</field>
+                                                                                                                                    <value name="A">
+                                                                                                                                      <block type="variables_get" id="]XespW?E.,pQa-2iWP:#">
+                                                                                                                                        <field name="VAR" id="7bpCyReeAjG{*!9uq+{h">smoke</field>
+                                                                                                                                      </block>
+                                                                                                                                    </value>
+                                                                                                                                    <value name="B">
+                                                                                                                                      <block type="math_number" id="]YSMaeq/w9/?mjk/cnNJ">
+                                                                                                                                        <field name="NUM">1000</field>
+                                                                                                                                      </block>
+                                                                                                                                    </value>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                                <value name="B">
+                                                                                                                                  <block type="logic_compare" id="]BiAZU[[_h#82[X-5;-$">
+                                                                                                                                    <field name="OP">GTE</field>
+                                                                                                                                    <value name="A">
+                                                                                                                                      <block type="variables_get" id="-?6uCrC=h,tQk#IoM0uu">
+                                                                                                                                        <field name="VAR" id="gzqhB_rk{|op|VzVvV:7">fire</field>
+                                                                                                                                      </block>
+                                                                                                                                    </value>
+                                                                                                                                    <value name="B">
+                                                                                                                                      <block type="math_number" id="PSp%X;BF3bINL0-`OE0j">
+                                                                                                                                        <field name="NUM">4000</field>
+                                                                                                                                      </block>
+                                                                                                                                    </value>
+                                                                                                                                  </block>
+                                                                                                                                </value>
+                                                                                                                              </block>
+                                                                                                                            </value>
+                                                                                                                            <statement name="DO0">
+                                                                                                                              <block type="RGB_LED_all_gui" id="SV}iLb}*J=n6gyId.:2A">
+                                                                                                                                <field name="neopixel_name">my_rgb</field>
+                                                                                                                                <field name="COLOUR">#ff0000</field>
+                                                                                                                                <next>
+                                                                                                                                  <block type="RGB_LED_show" id="0ZkPB3AcI#jT-m~zZBr0">
+                                                                                                                                    <field name="neopixel_name">my_rgb</field>
+                                                                                                                                    <next>
+                                                                                                                                      <block type="mpython_clear_dispchar_5lines" id="dpThf8(Ns.o=(l_aFqCJ">
+                                                                                                                                        <value name="DispChar_5lines">
+                                                                                                                                          <shadow type="mpython_4_lines" id="xe}$|0`*JPh+qm@lf;L}">
+                                                                                                                                            <field name="mpython_4_lines">1</field>
+                                                                                                                                          </shadow>
+                                                                                                                                        </value>
+                                                                                                                                        <next>
+                                                                                                                                          <block type="mpython_display_DispChar_5lines" id="?d!ZB3g`%ywpOTstFAV0">
+                                                                                                                                            <field name="TEXTMODE">1</field>
+                                                                                                                                            <field name="AUTORETURN">False</field>
+                                                                                                                                            <value name="DispChar_5lines">
+                                                                                                                                              <shadow type="mpython_4_lines" id="z/QdY#Zp^KaEV?@7FGJ^">
+                                                                                                                                                <field name="mpython_4_lines">1</field>
+                                                                                                                                              </shadow>
+                                                                                                                                            </value>
+                                                                                                                                            <value name="message">
+                                                                                                                                              <shadow type="text" id="(1LJ:$xdpJ59u=1ldSlk">
+                                                                                                                                                <field name="TEXT">  火警联动（本地报警）</field>
+                                                                                                                                              </shadow>
+                                                                                                                                            </value>
+                                                                                                                                            <next>
+                                                                                                                                              <block type="mpython_clear_dispchar_5lines" id="#t3c9K5~Ax)ve8W#A8?B">
+                                                                                                                                                <value name="DispChar_5lines">
+                                                                                                                                                  <shadow type="mpython_4_lines" id="Rj~%k=sREy#_sV0RRuh1">
+                                                                                                                                                    <field name="mpython_4_lines">4</field>
+                                                                                                                                                  </shadow>
+                                                                                                                                                </value>
+                                                                                                                                                <next>
+                                                                                                                                                  <block type="mpython_display_DispChar_5lines" id="^dv5k6$tO{uj2T*$3ud,">
+                                                                                                                                                    <field name="TEXTMODE">1</field>
+                                                                                                                                                    <field name="AUTORETURN">False</field>
+                                                                                                                                                    <value name="DispChar_5lines">
+                                                                                                                                                      <shadow type="mpython_4_lines" id="}llYk0[V(y]@PM;E8bO}">
+                                                                                                                                                        <field name="mpython_4_lines">4</field>
+                                                                                                                                                      </shadow>
+                                                                                                                                                    </value>
+                                                                                                                                                    <value name="message">
+                                                                                                                                                      <shadow type="text" id="I$$56r8W/p0v4`:AI4gt">
+                                                                                                                                                        <field name="TEXT"></field>
+                                                                                                                                                      </shadow>
+                                                                                                                                                      <block type="text_join" id="~P~;c_u!mhO3qgy+yif/">
+                                                                                                                                                        <mutation items="8"></mutation>
+                                                                                                                                                        <value name="ADD0">
+                                                                                                                                                          <block type="text" id="DMGH,BmdBud!XV;,^XET">
+                                                                                                                                                            <field name="TEXT">时间: </field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="ADD1">
+                                                                                                                                                          <block type="mpython_time_localtime" id="!pj4!%]3^ckKJlw}1-%_">
+                                                                                                                                                            <field name="time_localtime">[3]</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="ADD2">
+                                                                                                                                                          <block type="text" id="59(#B8+J[d_5xPe*NNR~">
+                                                                                                                                                            <field name="TEXT">:</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="ADD3">
+                                                                                                                                                          <block type="mpython_time_localtime" id="I8lV~AG)t$*D?ko*[[/v">
+                                                                                                                                                            <field name="time_localtime">[4]</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="ADD4">
+                                                                                                                                                          <block type="text" id="hT,)Lk!ZNyT-zV}X#63O">
+                                                                                                                                                            <field name="TEXT"> </field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="ADD5">
+                                                                                                                                                          <block type="text" id="ewm5)!?ArGO:|uW9#2|@">
+                                                                                                                                                            <field name="TEXT">点位: </field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="ADD6">
+                                                                                                                                                          <block type="variables_get" id="-^MgRKvZX8Sr~zQTq_Op">
+                                                                                                                                                            <field name="VAR" id="{XU#mI`8)cEfyM:w|hih">place</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                        <value name="ADD7">
+                                                                                                                                                          <block type="variables_get" id="bSqvuPKNKk=1)!-Z!`0c">
+                                                                                                                                                            <field name="VAR" id="m98:wwWg3q^E.MD!*5Zu">alert</field>
+                                                                                                                                                          </block>
+                                                                                                                                                        </value>
+                                                                                                                                                      </block>
+                                                                                                                                                    </value>
+                                                                                                                                                    <next>
+                                                                                                                                                      <block type="mpython_display_Show" id="%N/?KF+$tt+Ay!X1J4!N">
+                                                                                                                                                        <next>
+                                                                                                                                                          <block type="mpython_siot_publish_to" id="pYzpD*Dq,g[HTKw$B*2Q">
+                                                                                                                                                            <value name="MESSAGE">
+                                                                                                                                                              <shadow type="text">
+                                                                                                                                                                <field name="TEXT"></field>
+                                                                                                                                                              </shadow>
+                                                                                                                                                              <block type="variables_get" id="65d`0+UWv|Dtx(iES}?5">
+                                                                                                                                                                <field name="VAR" id="{XU#mI`8)cEfyM:w|hih">place</field>
+                                                                                                                                                              </block>
+                                                                                                                                                            </value>
+                                                                                                                                                            <value name="TOPIC">
+                                                                                                                                                              <shadow type="text" id="AAC;ag6CI%:W2{Kd@yMG">
+                                                                                                                                                                <field name="TEXT"></field>
+                                                                                                                                                              </shadow>
+                                                                                                                                                              <block type="variables_get" id="e1-v5zk@L+,2*O0hY)Wz">
+                                                                                                                                                                <field name="VAR" id="2yJMX_W%xH^d=Y2n]U^-">topicAlertPlace</field>
+                                                                                                                                                              </block>
+                                                                                                                                                            </value>
+                                                                                                                                                            <next>
+                                                                                                                                                              <block type="mpython_buzz_freq" id="x$Va15mpPf/nqP0}0hVu">
+                                                                                                                                                                <value name="freq">
+                                                                                                                                                                  <shadow type="mpython_music_tone" id="a9%d|z$OF){;PyS/f{J_">
+                                                                                                                                                                    <field name="music_tone">131</field>
+                                                                                                                                                                  </shadow>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="pin">
+                                                                                                                                                                  <shadow type="mpython_music_pin_p6" id="I?Yf3wffAngvY(hAKUan">
+                                                                                                                                                                    <field name="music_pin">15</field>
+                                                                                                                                                                  </shadow>
+                                                                                                                                                                </value>
+                                                                                                                                                              </block>
+                                                                                                                                                            </next>
+                                                                                                                                                          </block>
+                                                                                                                                                        </next>
+                                                                                                                                                      </block>
+                                                                                                                                                    </next>
+                                                                                                                                                  </block>
+                                                                                                                                                </next>
+                                                                                                                                              </block>
+                                                                                                                                            </next>
+                                                                                                                                          </block>
+                                                                                                                                        </next>
+                                                                                                                                      </block>
+                                                                                                                                    </next>
+                                                                                                                                  </block>
+                                                                                                                                </next>
+                                                                                                                              </block>
+                                                                                                                            </statement>
+                                                                                                                            <statement name="ELSE">
+                                                                                                                              <block type="microbit_music_stop" id="JW0^Q_[0;g*gt+qNf()*">
+                                                                                                                                <value name="pin">
+                                                                                                                                  <shadow type="mpython_music_pin_p6" id="0knZvN=cJVHqxY=yAyR/">
+                                                                                                                                    <field name="music_pin">15</field>
+                                                                                                                                  </shadow>
+                                                                                                                                </value>
+                                                                                                                                <next>
+                                                                                                                                  <block type="controls_if" id="bFDy{QLun=AV_co_Hn!/">
+                                                                                                                                    <mutation else="1"></mutation>
+                                                                                                                                    <value name="IF0">
+                                                                                                                                      <block type="logic_compare" id="w[J(;6,7.EZZ[Ly-M6$F">
+                                                                                                                                        <field name="OP">NEQ</field>
+                                                                                                                                        <value name="A">
+                                                                                                                                          <block type="variables_get" id="#EFIK~^Wb/$O.K7z?B_T">
+                                                                                                                                            <field name="VAR" id="m98:wwWg3q^E.MD!*5Zu">alert</field>
+                                                                                                                                          </block>
+                                                                                                                                        </value>
+                                                                                                                                        <value name="B">
+                                                                                                                                          <block type="text" id="mK/^J0{|(LH+i3I*|x0T">
+                                                                                                                                            <field name="TEXT"></field>
+                                                                                                                                          </block>
+                                                                                                                                        </value>
+                                                                                                                                      </block>
+                                                                                                                                    </value>
+                                                                                                                                    <statement name="DO0">
+                                                                                                                                      <block type="RGB_LED_all_gui" id="Jch1BU6^fD:bxr=x[$@a">
+                                                                                                                                        <field name="neopixel_name">my_rgb</field>
+                                                                                                                                        <field name="COLOUR">#ff0000</field>
+                                                                                                                                        <next>
+                                                                                                                                          <block type="RGB_LED_show" id="wFW?1qjH^Esz!o9574b4">
+                                                                                                                                            <field name="neopixel_name">my_rgb</field>
+                                                                                                                                            <next>
+                                                                                                                                              <block type="mpython_clear_dispchar_5lines" id="H1K_.Om2$d)+8jSAIah5">
+                                                                                                                                                <value name="DispChar_5lines">
+                                                                                                                                                  <shadow type="mpython_4_lines" id="W*@^:t6*W}]/J4Zj?X|Q">
+                                                                                                                                                    <field name="mpython_4_lines">1</field>
+                                                                                                                                                  </shadow>
+                                                                                                                                                </value>
+                                                                                                                                                <next>
+                                                                                                                                                  <block type="mpython_display_DispChar_5lines" id="UWp{3qx7wZHEJ#d|EZYA">
+                                                                                                                                                    <field name="TEXTMODE">1</field>
+                                                                                                                                                    <field name="AUTORETURN">False</field>
+                                                                                                                                                    <value name="DispChar_5lines">
+                                                                                                                                                      <shadow type="mpython_4_lines" id=",p5ptQJQ|M:I@2op.|Vv">
+                                                                                                                                                        <field name="mpython_4_lines">1</field>
+                                                                                                                                                      </shadow>
+                                                                                                                                                    </value>
+                                                                                                                                                    <value name="message">
+                                                                                                                                                      <shadow type="text" id="5i(4H+pMhD~_{CP^`dzy">
+                                                                                                                                                        <field name="TEXT">  火警联动（远程报警）</field>
+                                                                                                                                                      </shadow>
+                                                                                                                                                    </value>
+                                                                                                                                                    <next>
+                                                                                                                                                      <block type="mpython_clear_dispchar_5lines" id="#tLTV-D;wn*?mW?R;Ssy">
+                                                                                                                                                        <value name="DispChar_5lines">
+                                                                                                                                                          <shadow type="mpython_4_lines" id="YoPHk{vA.tjpg.dVlN~b">
+                                                                                                                                                            <field name="mpython_4_lines">4</field>
+                                                                                                                                                          </shadow>
+                                                                                                                                                        </value>
+                                                                                                                                                        <next>
+                                                                                                                                                          <block type="mpython_display_DispChar_5lines" id=")?tK{LwQ`(aq8k%v92AR">
+                                                                                                                                                            <field name="TEXTMODE">1</field>
+                                                                                                                                                            <field name="AUTORETURN">False</field>
+                                                                                                                                                            <value name="DispChar_5lines">
+                                                                                                                                                              <shadow type="mpython_4_lines" id="3iA3)iIQfhOyjZB)uefi">
+                                                                                                                                                                <field name="mpython_4_lines">4</field>
+                                                                                                                                                              </shadow>
+                                                                                                                                                            </value>
+                                                                                                                                                            <value name="message">
+                                                                                                                                                              <shadow type="text" id="i;ua~#6~-cW7yx$V+8ZE">
+                                                                                                                                                                <field name="TEXT"></field>
+                                                                                                                                                              </shadow>
+                                                                                                                                                              <block type="text_join" id="+h}fe?k|]06pNXxUHtP#">
+                                                                                                                                                                <mutation items="7"></mutation>
+                                                                                                                                                                <value name="ADD0">
+                                                                                                                                                                  <block type="text" id="UF9HEO2ym;$qyicoP$Yt">
+                                                                                                                                                                    <field name="TEXT">时间: </field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="ADD1">
+                                                                                                                                                                  <block type="mpython_time_localtime" id="a0iS,hTdKn7AbLTQ/w_y">
+                                                                                                                                                                    <field name="time_localtime">[3]</field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="ADD2">
+                                                                                                                                                                  <block type="text" id="Q0:-u:9ubDCWV:*0PMtr">
+                                                                                                                                                                    <field name="TEXT">:</field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="ADD3">
+                                                                                                                                                                  <block type="mpython_time_localtime" id="Ve+KpMh%YH_5ZZt}#w;Z">
+                                                                                                                                                                    <field name="time_localtime">[4]</field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="ADD4">
+                                                                                                                                                                  <block type="text" id="~zxW06N3[zkfUL,x|WxB">
+                                                                                                                                                                    <field name="TEXT"> </field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="ADD5">
+                                                                                                                                                                  <block type="text" id="?Ye@Z)Z!onG_sF4)GY:U">
+                                                                                                                                                                    <field name="TEXT">点位: </field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                                <value name="ADD6">
+                                                                                                                                                                  <block type="variables_get" id="*+^D(jj;d47O2:-u{C^M">
+                                                                                                                                                                    <field name="VAR" id="m98:wwWg3q^E.MD!*5Zu">alert</field>
+                                                                                                                                                                  </block>
+                                                                                                                                                                </value>
+                                                                                                                                                              </block>
+                                                                                                                                                            </value>
+                                                                                                                                                            <next>
+                                                                                                                                                              <block type="mpython_display_Show" id="]{%OvQr}S)LFL*OXMC7Y"></block>
+                                                                                                                                                            </next>
+                                                                                                                                                          </block>
+                                                                                                                                                        </next>
+                                                                                                                                                      </block>
+                                                                                                                                                    </next>
+                                                                                                                                                  </block>
+                                                                                                                                                </next>
+                                                                                                                                              </block>
+                                                                                                                                            </next>
+                                                                                                                                          </block>
+                                                                                                                                        </next>
+                                                                                                                                      </block>
+                                                                                                                                    </statement>
+                                                                                                                                    <statement name="ELSE">
+                                                                                                                                      <block type="RGB_LED_all_gui" id="wikd=B$?lFv,/{(s431@">
+                                                                                                                                        <field name="neopixel_name">my_rgb</field>
+                                                                                                                                        <field name="COLOUR">#33cc00</field>
+                                                                                                                                        <next>
+                                                                                                                                          <block type="RGB_LED_show" id="WzPOg84qyt@G|gd!L6T@">
+                                                                                                                                            <field name="neopixel_name">my_rgb</field>
+                                                                                                                                            <next>
+                                                                                                                                              <block type="mpython_clear_dispchar_5lines" id=":eLe)lop;]CIu*rhNf*o">
+                                                                                                                                                <value name="DispChar_5lines">
+                                                                                                                                                  <shadow type="mpython_4_lines" id="qg~bDyU$Vk+:E-YE]fCt">
+                                                                                                                                                    <field name="mpython_4_lines">1</field>
+                                                                                                                                                  </shadow>
+                                                                                                                                                </value>
+                                                                                                                                                <next>
+                                                                                                                                                  <block type="mpython_display_DispChar_5lines" id="S#!6S1)Y93k.i=i9|7Y4">
+                                                                                                                                                    <field name="TEXTMODE">1</field>
+                                                                                                                                                    <field name="AUTORETURN">False</field>
+                                                                                                                                                    <value name="DispChar_5lines">
+                                                                                                                                                      <shadow type="mpython_4_lines" id="nb,SVGq*r~(Od`*GQhVr">
+                                                                                                                                                        <field name="mpython_4_lines">1</field>
+                                                                                                                                                      </shadow>
+                                                                                                                                                    </value>
+                                                                                                                                                    <value name="message">
+                                                                                                                                                      <shadow type="text" id="Bz1lt5,f/l?dKjeukhQ0">
+                                                                                                                                                        <field name="TEXT">  火警联动（状态正常）</field>
+                                                                                                                                                      </shadow>
+                                                                                                                                                    </value>
+                                                                                                                                                    <next>
+                                                                                                                                                      <block type="mpython_clear_dispchar_5lines" id="YNIt_t9s/)U26:Hs9MzG">
+                                                                                                                                                        <value name="DispChar_5lines">
+                                                                                                                                                          <shadow type="mpython_4_lines" id="z7ZRN5pYaCUE3W,DFX{O">
+                                                                                                                                                            <field name="mpython_4_lines">4</field>
+                                                                                                                                                          </shadow>
+                                                                                                                                                        </value>
+                                                                                                                                                        <next>
+                                                                                                                                                          <block type="mpython_display_Show" id="L7Litr)mCp0@7QY8(HBD"></block>
+                                                                                                                                                        </next>
+                                                                                                                                                      </block>
+                                                                                                                                                    </next>
+                                                                                                                                                  </block>
+                                                                                                                                                </next>
+                                                                                                                                              </block>
+                                                                                                                                            </next>
+                                                                                                                                          </block>
+                                                                                                                                        </next>
+                                                                                                                                      </block>
+                                                                                                                                    </statement>
+                                                                                                                                  </block>
+                                                                                                                                </next>
+                                                                                                                              </block>
+                                                                                                                            </statement>
+                                                                                                                            <next>
+                                                                                                                              <block type="mpython_sleep_ms" id="oBYn:Y|%5a151*jdG0(6">
+                                                                                                                                <field name="ms_us">ms</field>
+                                                                                                                                <value name="duration">
+                                                                                                                                  <shadow type="math_number" id="YG@7D8Wpoll2o_.xrE6f">
+                                                                                                                                    <field name="NUM">500</field>
+                                                                                                                                  </shadow>
+                                                                                                                                </value>
+                                                                                                                              </block>
+                                                                                                                            </next>
+                                                                                                                          </block>
+                                                                                                                        </next>
+                                                                                                                      </block>
+                                                                                                                    </next>
+                                                                                                                  </block>
+                                                                                                                </next>
+                                                                                                              </block>
+                                                                                                            </next>
+                                                                                                          </block>
+                                                                                                        </next>
+                                                                                                      </block>
+                                                                                                    </next>
+                                                                                                  </block>
+                                                                                                </next>
+                                                                                              </block>
+                                                                                            </next>
+                                                                                          </block>
+                                                                                        </next>
+                                                                                      </block>
+                                                                                    </statement>
+                                                                                  </block>
+                                                                                </next>
+                                                                              </block>
+                                                                            </next>
+                                                                          </block>
+                                                                        </next>
+                                                                      </block>
+                                                                    </next>
+                                                                  </block>
+                                                                </next>
+                                                              </block>
+                                                            </next>
+                                                          </block>
+                                                        </next>
+                                                      </block>
+                                                    </next>
+                                                  </block>
+                                                </next>
+                                              </block>
+                                            </next>
+                                          </block>
+                                        </next>
+                                      </block>
+                                    </next>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="mpython3_siot_receive_from" id="jkT~G+.$}Ns;.=hcl!vy" x="1237" y="138">
+    <field name="TOPIC">FireLinkage/AlertPlace</field>
+    <next>
+      <block type="text_print" id="oLktJ(j#jz(}GuYxT,ie">
+        <value name="TEXT">
+          <block type="mpython_siot_message" id="BK/gklhX,E}%AqMY_5F]"></block>
+        </value>
+        <next>
+          <block type="controls_if" id="Pzt4G};X;Lm+fh{p;bis">
+            <value name="IF0">
+              <block type="logic_compare" id="q4]T!W^3Nv=HHn^zx(f_">
+                <field name="OP">NEQ</field>
+                <value name="A">
+                  <block type="mpython_siot_message" id="U;e]Yu{aU/[/Oa2|#SCV"></block>
+                </value>
+                <value name="B">
+                  <block type="variables_get" id="80|B3aRL20SK.?:8fSRb">
+                    <field name="VAR" id="{XU#mI`8)cEfyM:w|hih">place</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="controls_if" id="zuYyLbUZqSHi0,B-kr~F">
+                <value name="IF0">
+                  <block type="logic_compare" id="nRRC.xd+^O]_Uc}Qr]}#">
+                    <field name="OP">EQ</field>
+                    <value name="A">
+                      <block type="text_indexOf" id="kuB`$g1~3B%Lg`iRg7`3">
+                        <field name="END">FIRST</field>
+                        <value name="VALUE">
+                          <shadow type="text" id="uThC8/^lNNE9Lq?!x/e/">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="variables_get" id="R#PeZlX9xXiNnJ..1!{}">
+                            <field name="VAR" id="m98:wwWg3q^E.MD!*5Zu">alert</field>
+                          </block>
+                        </value>
+                        <value name="FIND">
+                          <shadow type="text" id="94Qu%N#hHohI7^unG}_H">
+                            <field name="TEXT">b</field>
+                          </shadow>
+                          <block type="mpython_siot_message" id="az-OLe_Km-Y.6;rt.NzH"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <block type="math_number" id="gx{}X]Fq(zgMr/QhvM=4">
+                        <field name="NUM">-1</field>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="variables_set" id="5g=.wcx:O{0B$8UQ7!g,">
+                    <field name="VAR" id="m98:wwWg3q^E.MD!*5Zu">alert</field>
+                    <value name="VALUE">
+                      <block type="text_append_text" id="9KV7PzC]-HnE6d=;+a9W">
+                        <value name="text_abc">
+                          <shadow type="text" id="8=BR#3(mHF.Q7po`BBlX">
+                            <field name="TEXT">abc</field>
+                          </shadow>
+                          <block type="variables_get" id="vGNQtx_cB1mftV$hdb?u">
+                            <field name="VAR" id="m98:wwWg3q^E.MD!*5Zu">alert</field>
+                          </block>
+                        </value>
+                        <value name="append_text">
+                          <shadow type="text" id="2Pxg;K[B)prMP+i=eP7Z">
+                            <field name="TEXT">def</field>
+                          </shadow>
+                          <block type="mpython_siot_message" id="`KnMIK)0dH:_CZ0Sb@Bk"></block>
+                        </value>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="mpython_Timer_deinit" id="v9uN=3xVG85e6BCEH(*$">
+                        <value name="Timer_num">
+                          <shadow type="mpython_timer_option" id="TAU5DLFz/o*Uc_6YJ.Hk">
+                            <field name="Timer_num">10</field>
+                          </shadow>
+                        </value>
+                        <next>
+                          <block type="mpython_timer_init" id="d`z(x1-|~~8F:W6naATl">
+                            <field name="Timer_mode">ONE_SHOT</field>
+                            <value name="Num">
+                              <shadow type="mpython_timer_option" id="qiQC]:vPv[f9%rhxf#-s">
+                                <field name="Timer_num">10</field>
+                              </shadow>
+                            </value>
+                            <value name="period">
+                              <shadow type="math_number" id="|v:2p;V%|{[k.$;E]w0/">
+                                <field name="NUM">5000</field>
+                              </shadow>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </statement>
+              </block>
+            </statement>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+  <block type="mpython_timer_def" id="92P[|g,}gj%)m[j+x:.q" x="1238" y="538">
+    <value name="Num">
+      <shadow type="mpython_timer_option" id="A6~fsGFi1Q?DvBY:d_Wz">
+        <field name="Timer_num">10</field>
+      </shadow>
+    </value>
+    <next>
+      <block type="variables_set" id="s7,))`,S+6OkunAfP;ph">
+        <field name="VAR" id="m98:wwWg3q^E.MD!*5Zu">alert</field>
+        <value name="VALUE">
+          <block type="text" id="srT$YYV,9j+/HO8B4nzT">
+            <field name="TEXT"></field>
+          </block>
+        </value>
+      </block>
+    </next>
+  </block>
+</xml>
