@@ -351,6 +351,8 @@ namespace FireAlert
             this.uiLineChartFire.Style = UIStyle.LayuiGreen;
             this.uiDataGridViewPlace.Style = UIStyle.LayuiGreen;
             this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
+            this.uiLineChartSmoke.Refresh();
+            this.uiLineChartFire.Refresh();
             UiStyle = UIStyle.LayuiGreen;
 
             // 建议使用SIoT1.3作为MQTT服务器进行测试
@@ -395,6 +397,8 @@ namespace FireAlert
             this.uiLineChartFire.Style = UIStyle.Black;
             this.uiDataGridViewPlace.Style = UIStyle.Black;
             this.uiContextMenuStrip1.Style = UIStyle.Black;
+            this.uiLineChartSmoke.Refresh();
+            this.uiLineChartFire.Refresh();
             UiStyle = UIStyle.Black;
         }
         private void toolStripMenuItemLight_Click(object sender, EventArgs e)
@@ -409,6 +413,8 @@ namespace FireAlert
             this.uiLineChartFire.Style = UIStyle.Inherited;
             this.uiDataGridViewPlace.Style = UIStyle.Inherited;
             this.uiContextMenuStrip1.Style = UIStyle.Inherited;
+            this.uiLineChartSmoke.Refresh();
+            this.uiLineChartFire.Refresh();
             UiStyle = UIStyle.Inherited;
         }
         private void toolStripMenuItemDefault_Click(object sender, EventArgs e)
@@ -423,6 +429,8 @@ namespace FireAlert
             this.uiLineChartFire.Style = UIStyle.LayuiGreen;
             this.uiDataGridViewPlace.Style = UIStyle.LayuiGreen;
             this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
+            this.uiLineChartSmoke.Refresh();
+            this.uiLineChartFire.Refresh();
             UiStyle = UIStyle.LayuiGreen;
         }
         private void toolStripMenuItemBlue_Click(object sender, EventArgs e)
@@ -437,6 +445,8 @@ namespace FireAlert
             this.uiLineChartFire.Style = UIStyle.DarkBlue;
             this.uiDataGridViewPlace.Style = UIStyle.DarkBlue;
             this.uiContextMenuStrip1.Style = UIStyle.DarkBlue;
+            this.uiLineChartSmoke.Refresh();
+            this.uiLineChartFire.Refresh();
             UiStyle = UIStyle.DarkBlue;
         }
         private void toolStripMenuItemPurple_Click(object sender, EventArgs e)
@@ -451,6 +461,8 @@ namespace FireAlert
             this.uiLineChartFire.Style = UIStyle.Purple;
             this.uiDataGridViewPlace.Style = UIStyle.Purple;
             this.uiContextMenuStrip1.Style = UIStyle.Purple;
+            this.uiLineChartSmoke.Refresh();
+            this.uiLineChartFire.Refresh();
             UiStyle = UIStyle.Purple;
         }
         private void toolStripMenuItemRed_Click(object sender, EventArgs e)
@@ -465,6 +477,8 @@ namespace FireAlert
             this.uiLineChartFire.Style = UIStyle.Red;
             this.uiDataGridViewPlace.Style = UIStyle.Red;
             this.uiContextMenuStrip1.Style = UIStyle.Red;
+            this.uiLineChartSmoke.Refresh();
+            this.uiLineChartFire.Refresh();
             UiStyle = UIStyle.Red;
         }
         private void toolStripMenuItemOrange_Click(object sender, EventArgs e)
@@ -479,6 +493,8 @@ namespace FireAlert
             this.uiLineChartFire.Style = UIStyle.Orange;
             this.uiDataGridViewPlace.Style = UIStyle.Orange;
             this.uiContextMenuStrip1.Style = UIStyle.Orange;
+            this.uiLineChartSmoke.Refresh();
+            this.uiLineChartFire.Refresh();
             UiStyle = UIStyle.Orange;
         }
         private void toolStripMenuItemGreen_Click(object sender, EventArgs e)
@@ -493,6 +509,8 @@ namespace FireAlert
             this.uiLineChartFire.Style = UIStyle.Green;
             this.uiDataGridViewPlace.Style = UIStyle.Green;
             this.uiContextMenuStrip1.Style = UIStyle.Green;
+            this.uiLineChartSmoke.Refresh();
+            this.uiLineChartFire.Refresh();
             UiStyle = UIStyle.Green;
         }
 
