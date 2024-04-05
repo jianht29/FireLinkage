@@ -260,11 +260,11 @@ namespace FireAlert
 
                 if (indexSmoke > 50)
                 {
-                    this.uiLineChartSmoke.Option.XAxis.SetRange(indexSmoke - 50, indexSmoke);
+                    this.uiLineChartSmoke.Option.XAxis.SetRange(indexSmoke - 55, indexSmoke-5);
                 }
                 if (indexFire > 50)
                 {
-                    this.uiLineChartFire.Option.XAxis.SetRange(indexFire - 50, indexFire);
+                    this.uiLineChartFire.Option.XAxis.SetRange(indexFire - 55, indexFire-5);
                 }
 
                 this.uiLineChartSmoke.Refresh();
@@ -304,9 +304,9 @@ namespace FireAlert
             seriesSmoke2.Color = UIColor.Red;
             seriesSmoke3.Color = UIColor.Green;
             //设置曲线显示最大点数，超过后自动清理
-            seriesSmoke1.SetMaxCount(51);
-            seriesSmoke2.SetMaxCount(51);
-            seriesSmoke3.SetMaxCount(51);
+            seriesSmoke1.SetMaxCount(56);
+            seriesSmoke2.SetMaxCount(56);
+            seriesSmoke3.SetMaxCount(56);
             //坐标轴显示小数位数
             optionSmoke.XAxis.AxisLabel.DecimalPlaces = 1;
             optionSmoke.YAxis.AxisLabel.DecimalPlaces = 1;
@@ -331,9 +331,9 @@ namespace FireAlert
             seriesFire3.Color = UIColor.Green;
 
             //设置曲线显示最大点数，超过后自动清理
-            seriesFire1.SetMaxCount(51);
-            seriesFire2.SetMaxCount(51);
-            seriesFire3.SetMaxCount(51);
+            seriesFire1.SetMaxCount(56);
+            seriesFire2.SetMaxCount(56);
+            seriesFire3.SetMaxCount(56);
 
             //坐标轴显示小数位数
             optionFire.XAxis.AxisLabel.DecimalPlaces = 1;
