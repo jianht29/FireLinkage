@@ -217,42 +217,42 @@ namespace FireAlert
                         uiLedLabelSmoke1.Text = Convert.ToInt32(value).ToString();
 
                         uiProcessBarSmoke1.Value = Convert.ToInt32(value / 4096 * 100);
-                        this.uiLineChartSmoke.Option.AddData("Line1", indexSmoke, value);
+                        this.uiLineChartSmoke.Option.AddData("Smoke1", indexSmoke, value);
                         break;
                     case "FireLinkage/Fire1":
                         value = Convert.ToDouble(arg.ApplicationMessage.ConvertPayloadToString());
                         uiLedLabelFire1.Text = Convert.ToInt32(value).ToString();
 
                         uiProcessBarFire1.Value = Convert.ToInt32(value / 4096 * 100);
-                        this.uiLineChartFire.Option.AddData("Line1", indexSmoke, value);
+                        this.uiLineChartFire.Option.AddData("Fire1", indexSmoke, value);
                         break;
                     case "FireLinkage/Smoke2":
                         value = Convert.ToDouble(arg.ApplicationMessage.ConvertPayloadToString());
                         uiLedLabelSmoke2.Text = Convert.ToInt32(value).ToString();
 
                         uiProcessBarSmoke2.Value = Convert.ToInt32(value / 4096 * 100);
-                        this.uiLineChartSmoke.Option.AddData("Line2", indexSmoke, value);
+                        this.uiLineChartSmoke.Option.AddData("Smoke2", indexSmoke, value);
                         break;
                     case "FireLinkage/Fire2":
                         value = Convert.ToDouble(arg.ApplicationMessage.ConvertPayloadToString());
                         uiLedLabelFire2.Text = Convert.ToInt32(value).ToString();
 
                         uiProcessBarFire2.Value = Convert.ToInt32(value / 4096 * 100);
-                        this.uiLineChartFire.Option.AddData("Line2", indexSmoke, value);
+                        this.uiLineChartFire.Option.AddData("Fire2", indexSmoke, value);
                         break;
                     case "FireLinkage/Smoke3":
                         value = Convert.ToDouble(arg.ApplicationMessage.ConvertPayloadToString());
                         uiLedLabelSmoke3.Text = Convert.ToInt32(value).ToString();
 
                         uiProcessBarSmoke3.Value = Convert.ToInt32(value / 4096 * 100);
-                        this.uiLineChartSmoke.Option.AddData("Line3", indexSmoke, value);
+                        this.uiLineChartSmoke.Option.AddData("Smoke3", indexSmoke, value);
                         break;
                     case "FireLinkage/Fire3":
                         value = Convert.ToDouble(arg.ApplicationMessage.ConvertPayloadToString());
                         uiLedLabelFire3.Text = Convert.ToInt32(value).ToString();
 
                         uiProcessBarFire3.Value = Convert.ToInt32(value / 4096 * 100);
-                        this.uiLineChartFire.Option.AddData("Line3", indexSmoke, value);
+                        this.uiLineChartFire.Option.AddData("Fire3", indexSmoke, value);
                         break;
                     default:
                         break;
@@ -294,9 +294,9 @@ namespace FireAlert
                 Text = "烟雾传感器实时测量折线图"
                 //SubText = "实时测量值"
             };
-            var seriesSmoke1 = optionSmoke.AddSeries(new UILineSeries("Line1"));
-            var seriesSmoke2 = optionSmoke.AddSeries(new UILineSeries("Line2"));
-            var seriesSmoke3 = optionSmoke.AddSeries(new UILineSeries("Line3"));
+            var seriesSmoke1 = optionSmoke.AddSeries(new UILineSeries("Smoke1"));
+            var seriesSmoke2 = optionSmoke.AddSeries(new UILineSeries("Smoke2"));
+            var seriesSmoke3 = optionSmoke.AddSeries(new UILineSeries("Smoke3"));
             seriesSmoke1.CustomColor = true;
             seriesSmoke2.CustomColor = true;
             seriesSmoke3.CustomColor = true;
@@ -320,9 +320,9 @@ namespace FireAlert
                 Text = "火焰传感器实时测量折线图"
                 //SubText = "实时测量值"
             };
-            var seriesFire1 = optionFire.AddSeries(new UILineSeries("Line1"));
-            var seriesFire2 = optionFire.AddSeries(new UILineSeries("Line2"));
-            var seriesFire3 = optionFire.AddSeries(new UILineSeries("Line3"));
+            var seriesFire1 = optionFire.AddSeries(new UILineSeries("Fire1"));
+            var seriesFire2 = optionFire.AddSeries(new UILineSeries("Fire2"));
+            var seriesFire3 = optionFire.AddSeries(new UILineSeries("Fire3"));
             seriesFire1.CustomColor = true;
             seriesFire2.CustomColor = true;
             seriesFire3.CustomColor = true;
