@@ -304,9 +304,9 @@ namespace FireAlert
             seriesSmoke2.Color = UIColor.Red;
             seriesSmoke3.Color = UIColor.Green;
             //设置曲线显示最大点数，超过后自动清理
-            seriesSmoke1.SetMaxCount(50);
-            seriesSmoke2.SetMaxCount(50);
-            seriesSmoke3.SetMaxCount(50);
+            seriesSmoke1.SetMaxCount(51);
+            seriesSmoke2.SetMaxCount(51);
+            seriesSmoke3.SetMaxCount(51);
             //坐标轴显示小数位数
             optionSmoke.XAxis.AxisLabel.DecimalPlaces = 1;
             optionSmoke.YAxis.AxisLabel.DecimalPlaces = 1;
@@ -331,9 +331,9 @@ namespace FireAlert
             seriesFire3.Color = UIColor.Green;
 
             //设置曲线显示最大点数，超过后自动清理
-            seriesFire1.SetMaxCount(50);
-            seriesFire2.SetMaxCount(50);
-            seriesFire3.SetMaxCount(50);
+            seriesFire1.SetMaxCount(51);
+            seriesFire2.SetMaxCount(51);
+            seriesFire3.SetMaxCount(51);
 
             //坐标轴显示小数位数
             optionFire.XAxis.AxisLabel.DecimalPlaces = 1;
