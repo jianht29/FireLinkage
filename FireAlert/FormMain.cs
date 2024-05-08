@@ -389,34 +389,34 @@ namespace FireAlert
             this.uiLineChartFire.SetOption(optionFire);
 
             //设置默认的主题风格
-            //this.Style = UIStyle.LayuiGreen;
-            //this.uiTitlePanelSmoke.Style = UIStyle.LayuiGreen;
-            //this.uiTitlePanelFire.Style = UIStyle.LayuiGreen;
-            //this.uiTitlePanelAlert.Style = UIStyle.LayuiGreen;
-            //this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Default;
-            //this.uiLineChartFire.ChartStyleType = UIChartStyleType.Default;
-            //this.uiLineChartSmoke.Style = UIStyle.LayuiGreen;
-            //this.uiLineChartFire.Style = UIStyle.LayuiGreen;
-            //this.uiDataGridViewPlace.Style = UIStyle.LayuiGreen;
-            //this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
-            //this.uiLineChartSmoke.Refresh();
-            //this.uiLineChartFire.Refresh();
-            //UiStyle = UIStyle.LayuiGreen;
-
-            //设置深蓝色主题风格
-            this.Style = UIStyle.DarkBlue;
-            this.uiTitlePanelSmoke.Style = UIStyle.DarkBlue;
-            this.uiTitlePanelFire.Style = UIStyle.DarkBlue;
-            this.uiTitlePanelAlert.Style = UIStyle.DarkBlue;
-            this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.LiveChart;
-            this.uiLineChartFire.ChartStyleType = UIChartStyleType.LiveChart;
-            this.uiLineChartSmoke.Style = UIStyle.DarkBlue;
-            this.uiLineChartFire.Style = UIStyle.DarkBlue;
-            this.uiDataGridViewPlace.Style = UIStyle.DarkBlue;
-            this.uiContextMenuStrip1.Style = UIStyle.DarkBlue;
+            this.Style = UIStyle.LayuiGreen;
+            this.uiTitlePanelSmoke.Style = UIStyle.LayuiGreen;
+            this.uiTitlePanelFire.Style = UIStyle.LayuiGreen;
+            this.uiTitlePanelAlert.Style = UIStyle.LayuiGreen;
+            this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Default;
+            this.uiLineChartFire.ChartStyleType = UIChartStyleType.Default;
+            this.uiLineChartSmoke.Style = UIStyle.LayuiGreen;
+            this.uiLineChartFire.Style = UIStyle.LayuiGreen;
+            this.uiDataGridViewPlace.Style = UIStyle.LayuiGreen;
+            this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.DarkBlue;
+            UiStyle = UIStyle.LayuiGreen;
+
+            //设置深蓝色主题风格
+            //this.Style = UIStyle.DarkBlue;
+            //this.uiTitlePanelSmoke.Style = UIStyle.DarkBlue;
+            //this.uiTitlePanelFire.Style = UIStyle.DarkBlue;
+            //this.uiTitlePanelAlert.Style = UIStyle.DarkBlue;
+            //this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.LiveChart;
+            //this.uiLineChartFire.ChartStyleType = UIChartStyleType.LiveChart;
+            //this.uiLineChartSmoke.Style = UIStyle.DarkBlue;
+            //this.uiLineChartFire.Style = UIStyle.DarkBlue;
+            //this.uiDataGridViewPlace.Style = UIStyle.DarkBlue;
+            //this.uiContextMenuStrip1.Style = UIStyle.DarkBlue;
+            //this.uiLineChartSmoke.Refresh();
+            //this.uiLineChartFire.Refresh();
+            //UiStyle = UIStyle.DarkBlue;
 
             // 建议使用SIoT1.3作为MQTT服务器进行测试
             // 使用手册：https://siot.readthedocs.io/zh-cn/latest/
