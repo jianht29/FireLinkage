@@ -19,7 +19,7 @@
         <field name="VAR" id="{XU#mI`8)cEfyM:w|hih">place</field>
         <value name="VALUE">
           <block type="text" id="}QC6),m?v`!pS39xx/_V">
-            <field name="TEXT">A</field>
+            <field name="TEXT">B</field>
           </block>
         </value>
         <next>
@@ -51,7 +51,7 @@
                         <field name="VAR" id="]}4E]t*)?}+Rs1Ic2B|m">topicSmoke</field>
                         <value name="VALUE">
                           <block type="text" id="#~@x1x|$z*IDytT;p#YR">
-                            <field name="TEXT">FireLinkage/Smoke1</field>
+                            <field name="TEXT">FireLinkage/Smoke2</field>
                           </block>
                         </value>
                         <next>
@@ -59,7 +59,7 @@
                             <field name="VAR" id="wWaWr5Mpu/k;1.wWGRsE">topicFire</field>
                             <value name="VALUE">
                               <block type="text" id="]%7(-/#BS]pEM?jCk:CJ">
-                                <field name="TEXT">FireLinkage/Fire1</field>
+                                <field name="TEXT">FireLinkage/Fire2</field>
                               </block>
                             </value>
                             <next>
@@ -122,7 +122,7 @@
                                                               </block>
                                                             </statement>
                                                             <statement name="EXCEPT">
-                                                              <block type="mpython_try_except" id=";GD76zI*EL^]@|uKy6`|">
+                                                              <block type="mpython_try_except" id="EOhg4$HPH`s#`fH,LQEx">
                                                                 <statement name="TRY">
                                                                   <block type="mpython3_ntptime_settime" id="vfUdwC[9Znw=cSG??E*@">
                                                                     <field name="timezone">8</field>
@@ -134,9 +134,9 @@
                                                                   </block>
                                                                 </statement>
                                                                 <statement name="EXCEPT">
-                                                                  <block type="text_print" id="CJlS_vNs]^mC#avju{Rn">
+                                                                  <block type="text_print" id="wK[4Z|cqD],GbC|ifqVa">
                                                                     <value name="TEXT">
-                                                                      <shadow type="text" id="${q}3M4:mKpeP9LKDf)^">
+                                                                      <shadow type="text" id="5keO@n+v,kzu6SN[/bF3">
                                                                         <field name="TEXT">同步网络时间失败！</field>
                                                                       </shadow>
                                                                     </value>
@@ -148,7 +148,7 @@
                                                               <block type="mpython_siot_connect" id="9Ee4Yp0gr%y+$+Ef[X8}">
                                                                 <value name="CLIENT_ID">
                                                                   <shadow type="text" id="?M0SPH|_cj_V.[=)$Dl=">
-                                                                    <field name="TEXT">FireAlert-A</field>
+                                                                    <field name="TEXT">FireAlert-B</field>
                                                                   </shadow>
                                                                 </value>
                                                                 <value name="SERVER">
@@ -504,14 +504,14 @@
                                                                                                                                                                                   </block>
                                                                                                                                                                                 </value>
                                                                                                                                                                                 <value name="ADD3">
-                                                                                                                                                                                  <block type="text_format" id="GRp_4cpO_DgP75KfZzL3">
+                                                                                                                                                                                  <block type="text_format" id="LokT1FhZkac4^@ZIzF3A">
                                                                                                                                                                                     <value name="FORMAT">
-                                                                                                                                                                                      <shadow type="text" id="T[sdwh:#Fg0ihBM:#%e5">
+                                                                                                                                                                                      <shadow type="text" id=";^=gq4^b)WTt`2Q/kuEW">
                                                                                                                                                                                         <field name="TEXT">%02d</field>
                                                                                                                                                                                       </shadow>
                                                                                                                                                                                     </value>
                                                                                                                                                                                     <value name="CONTENT">
-                                                                                                                                                                                      <block type="mpython_time_localtime" id=")|)2P(Ika/tVS{ULw4My">
+                                                                                                                                                                                      <block type="mpython_time_localtime" id="I8lV~AG)t$*D?ko*[[/v">
                                                                                                                                                                                         <field name="time_localtime">[4]</field>
                                                                                                                                                                                       </block>
                                                                                                                                                                                     </value>
@@ -690,14 +690,14 @@
                                                                                                                                                                                           </block>
                                                                                                                                                                                         </value>
                                                                                                                                                                                         <value name="ADD3">
-                                                                                                                                                                                          <block type="text_format" id="2Nv;==cjW.29Np}U3MA^">
+                                                                                                                                                                                          <block type="text_format" id="ib^|hq`b3GtI=.Z_P*PA">
                                                                                                                                                                                             <value name="FORMAT">
-                                                                                                                                                                                              <shadow type="text" id="Zp7ff+;e2VIz*b{}F)ko">
+                                                                                                                                                                                              <shadow type="text" id="!h!a1*A,T3bKiYvM~ihx">
                                                                                                                                                                                                 <field name="TEXT">%02d</field>
                                                                                                                                                                                               </shadow>
                                                                                                                                                                                             </value>
                                                                                                                                                                                             <value name="CONTENT">
-                                                                                                                                                                                              <block type="mpython_time_localtime" id=":PSr/U=gv8zN4$Q|+Hu.">
+                                                                                                                                                                                              <block type="mpython_time_localtime" id="Ve+KpMh%YH_5ZZt}#w;Z">
                                                                                                                                                                                                 <field name="time_localtime">[4]</field>
                                                                                                                                                                                               </block>
                                                                                                                                                                                             </value>

@@ -29,11 +29,11 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.uiTitlePanelSmoke = new Sunny.UI.UITitlePanel();
             this.uiLedLabelSmoke3 = new Sunny.UI.UILedLabel();
@@ -77,6 +77,8 @@
             this.toolStripMenuItemOrange = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator3 = new System.Windows.Forms.ToolStripSeparator();
             this.toolStripMenuItemMqtt = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItemThreshold = new System.Windows.Forms.ToolStripMenuItem();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.uiTitlePanelSmoke.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -119,7 +121,7 @@
             this.uiTitlePanelSmoke.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTitlePanelSmoke.Name = "uiTitlePanelSmoke";
             this.uiTitlePanelSmoke.ShowText = false;
-            this.uiTitlePanelSmoke.Size = new System.Drawing.Size(1121, 423);
+            this.uiTitlePanelSmoke.Size = new System.Drawing.Size(1121, 384);
             this.uiTitlePanelSmoke.TabIndex = 0;
             this.uiTitlePanelSmoke.Text = "监测点位实时信息（烟雾传感器）";
             this.uiTitlePanelSmoke.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -129,7 +131,7 @@
             this.uiLedLabelSmoke3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLedLabelSmoke3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLedLabelSmoke3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.uiLedLabelSmoke3.Location = new System.Drawing.Point(186, 376);
+            this.uiLedLabelSmoke3.Location = new System.Drawing.Point(186, 337);
             this.uiLedLabelSmoke3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLedLabelSmoke3.Name = "uiLedLabelSmoke3";
             this.uiLedLabelSmoke3.Size = new System.Drawing.Size(80, 33);
@@ -149,7 +151,7 @@
             this.uiLineChartSmoke.MouseDownType = Sunny.UI.UILineChartMouseDownType.Zoom;
             this.uiLineChartSmoke.Name = "uiLineChartSmoke";
             this.uiLineChartSmoke.Radius = 1;
-            this.uiLineChartSmoke.Size = new System.Drawing.Size(820, 350);
+            this.uiLineChartSmoke.Size = new System.Drawing.Size(820, 311);
             this.uiLineChartSmoke.SubFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLineChartSmoke.TabIndex = 5;
             this.uiLineChartSmoke.Text = "uiLineChartSmoke";
@@ -159,7 +161,7 @@
             this.uiLedLabelSmoke2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLedLabelSmoke2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLedLabelSmoke2.ForeColor = System.Drawing.Color.Red;
-            this.uiLedLabelSmoke2.Location = new System.Drawing.Point(98, 376);
+            this.uiLedLabelSmoke2.Location = new System.Drawing.Point(98, 337);
             this.uiLedLabelSmoke2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLedLabelSmoke2.Name = "uiLedLabelSmoke2";
             this.uiLedLabelSmoke2.Size = new System.Drawing.Size(80, 33);
@@ -180,7 +182,7 @@
             this.uiProcessBarSmoke1.Radius = 3;
             this.uiProcessBarSmoke1.ShowPercent = false;
             this.uiProcessBarSmoke1.ShowValue = false;
-            this.uiProcessBarSmoke1.Size = new System.Drawing.Size(50, 318);
+            this.uiProcessBarSmoke1.Size = new System.Drawing.Size(50, 279);
             this.uiProcessBarSmoke1.TabIndex = 2;
             this.uiProcessBarSmoke1.Text = "uiProcessBar1";
             this.uiProcessBarSmoke1.Value = 1;
@@ -199,7 +201,7 @@
             this.uiProcessBarSmoke3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.uiProcessBarSmoke3.ShowPercent = false;
             this.uiProcessBarSmoke3.ShowValue = false;
-            this.uiProcessBarSmoke3.Size = new System.Drawing.Size(50, 318);
+            this.uiProcessBarSmoke3.Size = new System.Drawing.Size(50, 279);
             this.uiProcessBarSmoke3.TabIndex = 8;
             this.uiProcessBarSmoke3.Text = "uiProcessBar3";
             this.uiProcessBarSmoke3.Value = 1;
@@ -208,7 +210,7 @@
             // 
             this.uiLedLabelSmoke1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLedLabelSmoke1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLedLabelSmoke1.Location = new System.Drawing.Point(12, 376);
+            this.uiLedLabelSmoke1.Location = new System.Drawing.Point(12, 337);
             this.uiLedLabelSmoke1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLedLabelSmoke1.Name = "uiLedLabelSmoke1";
             this.uiLedLabelSmoke1.Size = new System.Drawing.Size(80, 33);
@@ -230,14 +232,13 @@
             this.uiProcessBarSmoke2.RectColor = System.Drawing.Color.Red;
             this.uiProcessBarSmoke2.ShowPercent = false;
             this.uiProcessBarSmoke2.ShowValue = false;
-            this.uiProcessBarSmoke2.Size = new System.Drawing.Size(50, 318);
+            this.uiProcessBarSmoke2.Size = new System.Drawing.Size(50, 279);
             this.uiProcessBarSmoke2.TabIndex = 7;
             this.uiProcessBarSmoke2.Text = "uiProcessBar2";
             this.uiProcessBarSmoke2.Value = 1;
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -255,7 +256,7 @@
             // 
             this.splitContainer1.Panel2.Controls.Add(this.uiDataGridViewPlace);
             this.splitContainer1.Panel2.Controls.Add(this.uiTitlePanelAlert);
-            this.splitContainer1.Size = new System.Drawing.Size(1436, 862);
+            this.splitContainer1.Size = new System.Drawing.Size(1436, 786);
             this.splitContainer1.SplitterDistance = 1125;
             this.splitContainer1.TabIndex = 8;
             // 
@@ -273,8 +274,8 @@
             // splitContainer2.Panel2
             // 
             this.splitContainer2.Panel2.Controls.Add(this.uiTitlePanelFire);
-            this.splitContainer2.Size = new System.Drawing.Size(1125, 862);
-            this.splitContainer2.SplitterDistance = 429;
+            this.splitContainer2.Size = new System.Drawing.Size(1125, 786);
+            this.splitContainer2.SplitterDistance = 390;
             this.splitContainer2.TabIndex = 0;
             // 
             // uiTitlePanelFire
@@ -295,7 +296,7 @@
             this.uiTitlePanelFire.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiTitlePanelFire.Name = "uiTitlePanelFire";
             this.uiTitlePanelFire.ShowText = false;
-            this.uiTitlePanelFire.Size = new System.Drawing.Size(1121, 421);
+            this.uiTitlePanelFire.Size = new System.Drawing.Size(1121, 384);
             this.uiTitlePanelFire.TabIndex = 1;
             this.uiTitlePanelFire.Text = "监测点位实时信息（火焰传感器）";
             this.uiTitlePanelFire.TextAlignment = System.Drawing.ContentAlignment.MiddleCenter;
@@ -305,7 +306,7 @@
             this.uiLedLabelFire3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLedLabelFire3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLedLabelFire3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
-            this.uiLedLabelFire3.Location = new System.Drawing.Point(186, 374);
+            this.uiLedLabelFire3.Location = new System.Drawing.Point(186, 337);
             this.uiLedLabelFire3.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLedLabelFire3.Name = "uiLedLabelFire3";
             this.uiLedLabelFire3.Size = new System.Drawing.Size(80, 33);
@@ -325,7 +326,7 @@
             this.uiLineChartFire.MouseDownType = Sunny.UI.UILineChartMouseDownType.Zoom;
             this.uiLineChartFire.Name = "uiLineChartFire";
             this.uiLineChartFire.Radius = 1;
-            this.uiLineChartFire.Size = new System.Drawing.Size(820, 348);
+            this.uiLineChartFire.Size = new System.Drawing.Size(820, 311);
             this.uiLineChartFire.SubFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLineChartFire.TabIndex = 5;
             this.uiLineChartFire.Text = "uiLineChartFire";
@@ -335,7 +336,7 @@
             this.uiLedLabelFire2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLedLabelFire2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiLedLabelFire2.ForeColor = System.Drawing.Color.Red;
-            this.uiLedLabelFire2.Location = new System.Drawing.Point(98, 374);
+            this.uiLedLabelFire2.Location = new System.Drawing.Point(98, 337);
             this.uiLedLabelFire2.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLedLabelFire2.Name = "uiLedLabelFire2";
             this.uiLedLabelFire2.Size = new System.Drawing.Size(80, 33);
@@ -356,7 +357,7 @@
             this.uiProcessBarFire1.Radius = 3;
             this.uiProcessBarFire1.ShowPercent = false;
             this.uiProcessBarFire1.ShowValue = false;
-            this.uiProcessBarFire1.Size = new System.Drawing.Size(50, 316);
+            this.uiProcessBarFire1.Size = new System.Drawing.Size(50, 279);
             this.uiProcessBarFire1.TabIndex = 2;
             this.uiProcessBarFire1.Text = "uiProcessBarFire1";
             this.uiProcessBarFire1.Value = 1;
@@ -375,7 +376,7 @@
             this.uiProcessBarFire3.RectColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(192)))), ((int)(((byte)(0)))));
             this.uiProcessBarFire3.ShowPercent = false;
             this.uiProcessBarFire3.ShowValue = false;
-            this.uiProcessBarFire3.Size = new System.Drawing.Size(50, 316);
+            this.uiProcessBarFire3.Size = new System.Drawing.Size(50, 279);
             this.uiProcessBarFire3.TabIndex = 8;
             this.uiProcessBarFire3.Text = "uiProcessBarFire3";
             this.uiProcessBarFire3.Value = 1;
@@ -384,7 +385,7 @@
             // 
             this.uiLedLabelFire1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.uiLedLabelFire1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiLedLabelFire1.Location = new System.Drawing.Point(12, 374);
+            this.uiLedLabelFire1.Location = new System.Drawing.Point(12, 337);
             this.uiLedLabelFire1.MinimumSize = new System.Drawing.Size(1, 1);
             this.uiLedLabelFire1.Name = "uiLedLabelFire1";
             this.uiLedLabelFire1.Size = new System.Drawing.Size(80, 33);
@@ -406,7 +407,7 @@
             this.uiProcessBarFire2.RectColor = System.Drawing.Color.Red;
             this.uiProcessBarFire2.ShowPercent = false;
             this.uiProcessBarFire2.ShowValue = false;
-            this.uiProcessBarFire2.Size = new System.Drawing.Size(50, 316);
+            this.uiProcessBarFire2.Size = new System.Drawing.Size(50, 279);
             this.uiProcessBarFire2.TabIndex = 7;
             this.uiProcessBarFire2.Text = "uiProcessBarFire2";
             this.uiProcessBarFire2.Value = 1;
@@ -415,61 +416,61 @@
             // 
             this.uiDataGridViewPlace.AllowUserToAddRows = false;
             this.uiDataGridViewPlace.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            this.uiDataGridViewPlace.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            this.uiDataGridViewPlace.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.uiDataGridViewPlace.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.uiDataGridViewPlace.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
             this.uiDataGridViewPlace.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewPlace.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridViewPlace.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.uiDataGridViewPlace.ColumnHeadersHeight = 32;
             this.uiDataGridViewPlace.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.uiDataGridViewPlace.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
             this.Column2});
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridViewPlace.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.uiDataGridViewPlace.DefaultCellStyle = dataGridViewCellStyle3;
             this.uiDataGridViewPlace.EnableHeadersVisualStyles = false;
             this.uiDataGridViewPlace.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.uiDataGridViewPlace.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(104)))), ((int)(((byte)(173)))), ((int)(((byte)(255)))));
             this.uiDataGridViewPlace.Location = new System.Drawing.Point(0, 122);
             this.uiDataGridViewPlace.Name = "uiDataGridViewPlace";
             this.uiDataGridViewPlace.ReadOnly = true;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.uiDataGridViewPlace.RowHeadersDefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(243)))), ((int)(((byte)(249)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(80)))), ((int)(((byte)(160)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.uiDataGridViewPlace.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.uiDataGridViewPlace.RowHeadersVisible = false;
             this.uiDataGridViewPlace.RowHeadersWidth = 62;
-            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.uiDataGridViewPlace.RowsDefaultCellStyle = dataGridViewCellStyle10;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(236)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.uiDataGridViewPlace.RowsDefaultCellStyle = dataGridViewCellStyle5;
             this.uiDataGridViewPlace.RowTemplate.Height = 23;
             this.uiDataGridViewPlace.SelectedIndex = -1;
-            this.uiDataGridViewPlace.Size = new System.Drawing.Size(303, 735);
+            this.uiDataGridViewPlace.Size = new System.Drawing.Size(303, 659);
             this.uiDataGridViewPlace.TabIndex = 11;
             // 
             // Column1
@@ -606,9 +607,10 @@
             this.toolStripMenuItemPurple,
             this.toolStripMenuItemOrange,
             this.toolStripSeparator3,
-            this.toolStripMenuItemMqtt});
+            this.toolStripMenuItemMqtt,
+            this.toolStripMenuItemThreshold});
             this.uiContextMenuStrip1.Name = "uiContextMenuStrip1";
-            this.uiContextMenuStrip1.Size = new System.Drawing.Size(243, 220);
+            this.uiContextMenuStrip1.Size = new System.Drawing.Size(243, 242);
             // 
             // toolStripMenuItemDefault
             // 
@@ -688,10 +690,22 @@
             this.toolStripMenuItemMqtt.Text = "连接MQTT服务器";
             this.toolStripMenuItemMqtt.Click += new System.EventHandler(this.toolStripMenuItemMqtt_Click);
             // 
+            // toolStripMenuItemThreshold
+            // 
+            this.toolStripMenuItemThreshold.Name = "toolStripMenuItemThreshold";
+            this.toolStripMenuItemThreshold.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemThreshold.Text = "设置报警的阈值";
+            this.toolStripMenuItemThreshold.Click += new System.EventHandler(this.toolStripMenuItemThreshold_Click);
+            // 
+            // timer2
+            // 
+            this.timer2.Interval = 1000;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // FormMain
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.ClientSize = new System.Drawing.Size(1440, 900);
+            this.ClientSize = new System.Drawing.Size(1440, 824);
             this.ContextMenuStrip = this.uiContextMenuStrip1;
             this.Controls.Add(this.splitContainer1);
             this.ExtendBox = true;
@@ -777,5 +791,7 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemOrange;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator3;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemMqtt;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemThreshold;
+        private System.Windows.Forms.Timer timer2;
     }
 }

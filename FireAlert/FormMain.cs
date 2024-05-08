@@ -68,6 +68,10 @@ namespace FireAlert
         // 烟雾传感器和火焰传感器折线图数据索引
         public int indexSmoke = 0;
         public int indexFire = 0;
+        // 烟雾传感器和火焰传感器的报警阈值
+        public int AlertSmoke = 2000;
+        public int AlertFire = 2000;
+        public int PublishCount = 0;
 
         /// <summary>
         /// 使用指定的参数连接MQTT服务器
@@ -148,6 +152,8 @@ namespace FireAlert
             MqttClient.SubscribeAsync("FireLinkage/Fire2", MqttQualityOfServiceLevel.AtLeastOnce);
             MqttClient.SubscribeAsync("FireLinkage/Smoke3", MqttQualityOfServiceLevel.AtLeastOnce);
             MqttClient.SubscribeAsync("FireLinkage/Fire3", MqttQualityOfServiceLevel.AtLeastOnce);
+            MqttClient.SubscribeAsync("FireLinkage/AlertSmoke", MqttQualityOfServiceLevel.AtLeastOnce);
+            MqttClient.SubscribeAsync("FireLinkage/AlertFire", MqttQualityOfServiceLevel.AtLeastOnce);
 
             return Task.CompletedTask;
         }
@@ -254,17 +260,23 @@ namespace FireAlert
                         uiProcessBarFire3.Value = Convert.ToInt32(value / 4096 * 100);
                         this.uiLineChartFire.Option.AddData("Fire3", indexSmoke, value);
                         break;
+                    case "FireLinkage/AlertSmoke":
+                        Int32.TryParse(arg.ApplicationMessage.ConvertPayloadToString(), out AlertSmoke);
+                        break;
+                    case "FireLinkage/AlertFire":
+                        Int32.TryParse(arg.ApplicationMessage.ConvertPayloadToString(), out AlertFire);
+                        break;
                     default:
                         break;
                 }
 
                 if (indexSmoke > 50)
                 {
-                    this.uiLineChartSmoke.Option.XAxis.SetRange(indexSmoke - 55, indexSmoke-5);
+                    this.uiLineChartSmoke.Option.XAxis.SetRange(indexSmoke - 55, indexSmoke - 5);
                 }
                 if (indexFire > 50)
                 {
-                    this.uiLineChartFire.Option.XAxis.SetRange(indexFire - 55, indexFire-5);
+                    this.uiLineChartFire.Option.XAxis.SetRange(indexFire - 55, indexFire - 5);
                 }
 
                 this.uiLineChartSmoke.Refresh();
@@ -275,6 +287,42 @@ namespace FireAlert
             }));
 
             return Task.CompletedTask;
+        }
+
+        /// <summary>
+        /// 向MQTT服务器指定的主题发送消息
+        /// </summary>
+        /// <param name="mqttTopic">发布消息的主题</param>
+        /// <param name="mqttMessage">发布消息的内容</param>
+        public async void MqttClientPublishAsync(string mqttTopic, string mqttMessage)
+        {
+            using (var mqttPublishClient = new MqttFactory().CreateMqttClient())
+            {
+                var mqttPublishClientOptions = new MqttClientOptionsBuilder()
+                    .WithTcpServer(Mqtt_Server, Mqtt_Port)    // MQTT服务器的IP和端口号
+                    .WithCredentials(Mqtt_UserName, Mqtt_PassWord)      // MQTT服务器的用户名和密码
+                    .WithClientId(Mqtt_ClientId + Guid.NewGuid().ToString("N"))   // 自动设置客户端ID的后缀，以免出现重复
+                    .WithCleanSession()
+                    .Build();
+
+                try
+                {
+                    await mqttPublishClient.ConnectAsync(mqttPublishClientOptions, CancellationToken.None);
+
+                    var mqttApplicationMessage = new MqttApplicationMessageBuilder()
+                        .WithTopic(mqttTopic)           // 消息主题
+                        .WithPayload(mqttMessage)       // 消息内容
+                        .Build();
+
+                    await mqttPublishClient.PublishAsync(mqttApplicationMessage, CancellationToken.None);
+
+                    await mqttPublishClient.DisconnectAsync();
+                }
+                catch (Exception ex)
+                {
+                    this.Text = "火警联动实时监测信息系统 - " + ex.Message;
+                }
+            }
         }
         public FormMain()
         {
@@ -341,19 +389,34 @@ namespace FireAlert
             this.uiLineChartFire.SetOption(optionFire);
 
             //设置默认的主题风格
-            this.Style = UIStyle.LayuiGreen;
-            this.uiTitlePanelSmoke.Style = UIStyle.LayuiGreen;
-            this.uiTitlePanelFire.Style = UIStyle.LayuiGreen;
-            this.uiTitlePanelAlert.Style = UIStyle.LayuiGreen;
-            this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Default;
-            this.uiLineChartFire.ChartStyleType = UIChartStyleType.Default;
-            this.uiLineChartSmoke.Style = UIStyle.LayuiGreen;
-            this.uiLineChartFire.Style = UIStyle.LayuiGreen;
-            this.uiDataGridViewPlace.Style = UIStyle.LayuiGreen;
-            this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
+            //this.Style = UIStyle.LayuiGreen;
+            //this.uiTitlePanelSmoke.Style = UIStyle.LayuiGreen;
+            //this.uiTitlePanelFire.Style = UIStyle.LayuiGreen;
+            //this.uiTitlePanelAlert.Style = UIStyle.LayuiGreen;
+            //this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Default;
+            //this.uiLineChartFire.ChartStyleType = UIChartStyleType.Default;
+            //this.uiLineChartSmoke.Style = UIStyle.LayuiGreen;
+            //this.uiLineChartFire.Style = UIStyle.LayuiGreen;
+            //this.uiDataGridViewPlace.Style = UIStyle.LayuiGreen;
+            //this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
+            //this.uiLineChartSmoke.Refresh();
+            //this.uiLineChartFire.Refresh();
+            //UiStyle = UIStyle.LayuiGreen;
+
+            //设置深蓝色主题风格
+            this.Style = UIStyle.DarkBlue;
+            this.uiTitlePanelSmoke.Style = UIStyle.DarkBlue;
+            this.uiTitlePanelFire.Style = UIStyle.DarkBlue;
+            this.uiTitlePanelAlert.Style = UIStyle.DarkBlue;
+            this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.LiveChart;
+            this.uiLineChartFire.ChartStyleType = UIChartStyleType.LiveChart;
+            this.uiLineChartSmoke.Style = UIStyle.DarkBlue;
+            this.uiLineChartFire.Style = UIStyle.DarkBlue;
+            this.uiDataGridViewPlace.Style = UIStyle.DarkBlue;
+            this.uiContextMenuStrip1.Style = UIStyle.DarkBlue;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.LayuiGreen;
+            UiStyle = UIStyle.DarkBlue;
 
             // 建议使用SIoT1.3作为MQTT服务器进行测试
             // 使用手册：https://siot.readthedocs.io/zh-cn/latest/
@@ -361,7 +424,7 @@ namespace FireAlert
             // GitHub：https://github.com/vvlink/SIoT/
 
             // 可以在任意位置重新设置需要连接的MQTT服务参数
-            Mqtt_Server = "127.0.0.1";
+            Mqtt_Server = "192.168.1.100";
             Mqtt_Port = 1883;
             Mqtt_UserName = "siot";
             Mqtt_PassWord = "dfrobot";
@@ -518,6 +581,32 @@ namespace FireAlert
         {
             FormMqtt formMqtt = new FormMqtt(this);
             formMqtt.ShowDialog();
+        }
+
+        private void toolStripMenuItemThreshold_Click(object sender, EventArgs e)
+        {
+            FormThreshold formThreshold = new FormThreshold(UiStyle, AlertSmoke, AlertFire);
+            if (formThreshold.ShowDialog() == System.Windows.Forms.DialogResult.OK)
+            {
+                AlertSmoke = formThreshold.AlertSmoke;
+                AlertFire = formThreshold.AlertFire;
+
+                PublishCount = 0;
+                timer2.Start();
+            }
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            MqttClientPublishAsync("FireLinkage/AlertSmoke", AlertSmoke.ToString());
+            Thread.Sleep(100);
+            MqttClientPublishAsync("FireLinkage/AlertFire", AlertFire.ToString());
+            PublishCount++;
+            if (PublishCount >= 3)
+            {
+                timer2.Stop();
+                PublishCount = 0;
+            }
         }
     }
 }

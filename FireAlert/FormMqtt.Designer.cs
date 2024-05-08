@@ -31,14 +31,14 @@
             this.uiTextBox4 = new Sunny.UI.UITextBox();
             this.uiTextBox3 = new Sunny.UI.UITextBox();
             this.uiTextBox2 = new Sunny.UI.UITextBox();
-            this.uiButton2 = new Sunny.UI.UIButton();
             this.uiLabel4 = new Sunny.UI.UILabel();
             this.uiLabel3 = new Sunny.UI.UILabel();
             this.uiLabel2 = new Sunny.UI.UILabel();
             this.uiLine1 = new Sunny.UI.UILine();
             this.uiTextBox1 = new Sunny.UI.UITextBox();
             this.uiLabel1 = new Sunny.UI.UILabel();
-            this.uiButton1 = new Sunny.UI.UIButton();
+            this.uiSymbolButton1 = new Sunny.UI.UISymbolButton();
+            this.uiSymbolButton2 = new Sunny.UI.UISymbolButton();
             this.SuspendLayout();
             // 
             // uiTextBox4
@@ -90,19 +90,6 @@
             this.uiTextBox2.Text = "1883";
             this.uiTextBox2.TextAlignment = System.Drawing.ContentAlignment.MiddleLeft;
             this.uiTextBox2.Watermark = "";
-            // 
-            // uiButton2
-            // 
-            this.uiButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton2.Location = new System.Drawing.Point(228, 272);
-            this.uiButton2.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton2.Name = "uiButton2";
-            this.uiButton2.Size = new System.Drawing.Size(100, 35);
-            this.uiButton2.TabIndex = 18;
-            this.uiButton2.Text = "取　消";
-            this.uiButton2.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton2.Click += new System.EventHandler(this.uiButton2_Click);
             // 
             // uiLabel4
             // 
@@ -175,34 +162,49 @@
             this.uiLabel1.Text = "服务器：";
             this.uiLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // uiButton1
+            // uiSymbolButton1
             // 
-            this.uiButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.uiButton1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton1.Location = new System.Drawing.Point(122, 272);
-            this.uiButton1.MinimumSize = new System.Drawing.Size(1, 1);
-            this.uiButton1.Name = "uiButton1";
-            this.uiButton1.Size = new System.Drawing.Size(100, 35);
-            this.uiButton1.TabIndex = 9;
-            this.uiButton1.Text = "连　接";
-            this.uiButton1.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.uiButton1.Click += new System.EventHandler(this.uiButton1_Click);
+            this.uiSymbolButton1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiSymbolButton1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton1.Location = new System.Drawing.Point(92, 272);
+            this.uiSymbolButton1.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolButton1.Name = "uiSymbolButton1";
+            this.uiSymbolButton1.Size = new System.Drawing.Size(110, 35);
+            this.uiSymbolButton1.Symbol = 61528;
+            this.uiSymbolButton1.TabIndex = 20;
+            this.uiSymbolButton1.Text = "连　接";
+            this.uiSymbolButton1.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton1.Click += new System.EventHandler(this.uiSymbolButton1_Click);
+            // 
+            // uiSymbolButton2
+            // 
+            this.uiSymbolButton2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.uiSymbolButton2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton2.Location = new System.Drawing.Point(218, 272);
+            this.uiSymbolButton2.MinimumSize = new System.Drawing.Size(1, 1);
+            this.uiSymbolButton2.Name = "uiSymbolButton2";
+            this.uiSymbolButton2.Size = new System.Drawing.Size(110, 35);
+            this.uiSymbolButton2.Symbol = 61527;
+            this.uiSymbolButton2.TabIndex = 21;
+            this.uiSymbolButton2.Text = "取　消";
+            this.uiSymbolButton2.TipsFont = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.uiSymbolButton2.Click += new System.EventHandler(this.uiSymbolButton2_Click);
             // 
             // FormMqtt
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.ClientSize = new System.Drawing.Size(345, 327);
+            this.Controls.Add(this.uiSymbolButton2);
+            this.Controls.Add(this.uiSymbolButton1);
             this.Controls.Add(this.uiTextBox4);
             this.Controls.Add(this.uiTextBox3);
             this.Controls.Add(this.uiTextBox2);
-            this.Controls.Add(this.uiButton2);
             this.Controls.Add(this.uiLabel4);
             this.Controls.Add(this.uiLabel3);
             this.Controls.Add(this.uiLabel2);
             this.Controls.Add(this.uiLine1);
             this.Controls.Add(this.uiTextBox1);
             this.Controls.Add(this.uiLabel1);
-            this.Controls.Add(this.uiButton1);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "FormMqtt";
@@ -219,13 +221,13 @@
         private Sunny.UI.UITextBox uiTextBox4;
         private Sunny.UI.UITextBox uiTextBox3;
         private Sunny.UI.UITextBox uiTextBox2;
-        private Sunny.UI.UIButton uiButton2;
         private Sunny.UI.UILabel uiLabel4;
         private Sunny.UI.UILabel uiLabel3;
         private Sunny.UI.UILabel uiLabel2;
         private Sunny.UI.UILine uiLine1;
         private Sunny.UI.UITextBox uiTextBox1;
         private Sunny.UI.UILabel uiLabel1;
-        private Sunny.UI.UIButton uiButton1;
+        private Sunny.UI.UISymbolButton uiSymbolButton1;
+        private Sunny.UI.UISymbolButton uiSymbolButton2;
     }
 }

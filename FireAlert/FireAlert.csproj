@@ -72,6 +72,12 @@
     <Compile Include="FormMqtt.Designer.cs">
       <DependentUpon>FormMqtt.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormThreshold.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormThreshold.Designer.cs">
+      <DependentUpon>FormThreshold.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
@@ -79,6 +85,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormMqtt.resx">
       <DependentUpon>FormMqtt.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormThreshold.resx">
+      <DependentUpon>FormThreshold.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
