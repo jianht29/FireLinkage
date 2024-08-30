@@ -47,16 +47,16 @@ namespace FireAlert
 
         private void FormThreshold_Load(object sender, EventArgs e)
         {
-            this.Style = UiStyle;
-            this.uiLabel1.Style = UiStyle;
-            this.uiLabel2.Style = UiStyle;
-            this.uiTextBoxSmoke.Style = UiStyle;
-            this.uiTextBoxFire.Style = UiStyle;
-            this.uiTrackBarSmoke.Style = UiStyle;
-            this.uiTrackBarFire.Style = UiStyle;
-            this.uiSymbolButtonOk.Style = UiStyle;
-            this.uiSymbolButtonCancel.Style = UiStyle;
-            this.uiLine1.Style = UiStyle;
+            //this.Style = UiStyle;
+            //this.uiLabel1.Style = UiStyle;
+            //this.uiLabel2.Style = UiStyle;
+            //this.uiTextBoxSmoke.Style = UiStyle;
+            //this.uiTextBoxFire.Style = UiStyle;
+            //this.uiTrackBarSmoke.Style = UiStyle;
+            //this.uiTrackBarFire.Style = UiStyle;
+            //this.uiSymbolButtonOk.Style = UiStyle;
+            //this.uiSymbolButtonCancel.Style = UiStyle;
+            //this.uiLine1.Style = UiStyle;
             this.uiTrackBarSmoke.Value = AlertSmoke;
             this.uiTextBoxSmoke.IntValue = AlertSmoke;
             this.uiTrackBarFire.Value = AlertFire;

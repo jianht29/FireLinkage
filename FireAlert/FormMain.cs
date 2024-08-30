@@ -389,34 +389,30 @@ namespace FireAlert
             this.uiLineChartFire.SetOption(optionFire);
 
             //设置默认的主题风格
-            this.Style = UIStyle.LayuiGreen;
-            this.uiTitlePanelSmoke.Style = UIStyle.LayuiGreen;
-            this.uiTitlePanelFire.Style = UIStyle.LayuiGreen;
-            this.uiTitlePanelAlert.Style = UIStyle.LayuiGreen;
+            UiStyle = UIStyle.LayuiGreen;
+            //使用StyleManager统一设置控件主题风格
+            uiStyleManager1.Style = UIStyle.LayuiGreen;
+            //this.Style = UIStyle.LayuiGreen;
+            //this.uiTitlePanelSmoke.Style = UIStyle.LayuiGreen;
+            //this.uiTitlePanelFire.Style = UIStyle.LayuiGreen;
+            //this.uiTitlePanelAlert.Style = UIStyle.LayuiGreen;
             this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Default;
             this.uiLineChartFire.ChartStyleType = UIChartStyleType.Default;
-            this.uiLineChartSmoke.Style = UIStyle.LayuiGreen;
-            this.uiLineChartFire.Style = UIStyle.LayuiGreen;
-            this.uiDataGridViewPlace.Style = UIStyle.LayuiGreen;
-            this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
+            //this.uiLineChartSmoke.Style = UIStyle.LayuiGreen;
+            //this.uiLineChartFire.Style = UIStyle.LayuiGreen;
+            //this.uiDataGridViewPlace.Style = UIStyle.LayuiGreen;
+            //this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.LayuiGreen;
 
             //设置深蓝色主题风格
-            //this.Style = UIStyle.DarkBlue;
-            //this.uiTitlePanelSmoke.Style = UIStyle.DarkBlue;
-            //this.uiTitlePanelFire.Style = UIStyle.DarkBlue;
-            //this.uiTitlePanelAlert.Style = UIStyle.DarkBlue;
+            //UiStyle = UIStyle.DarkBlue;
+            //使用StyleManager统一设置控件主题风格
+            //uiStyleManager1.Style = UIStyle.DarkBlue;
             //this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.LiveChart;
             //this.uiLineChartFire.ChartStyleType = UIChartStyleType.LiveChart;
-            //this.uiLineChartSmoke.Style = UIStyle.DarkBlue;
-            //this.uiLineChartFire.Style = UIStyle.DarkBlue;
-            //this.uiDataGridViewPlace.Style = UIStyle.DarkBlue;
-            //this.uiContextMenuStrip1.Style = UIStyle.DarkBlue;
             //this.uiLineChartSmoke.Refresh();
             //this.uiLineChartFire.Refresh();
-            //UiStyle = UIStyle.DarkBlue;
 
             // 建议使用SIoT1.3作为MQTT服务器进行测试
             // 使用手册：https://siot.readthedocs.io/zh-cn/latest/
@@ -450,131 +446,147 @@ namespace FireAlert
         }
         private void toolStripMenuItemDark_Click(object sender, EventArgs e)
         {
-            this.Style = UIStyle.Black;
-            this.uiTitlePanelSmoke.Style = UIStyle.Black;
-            this.uiTitlePanelFire.Style = UIStyle.Black;
-            this.uiTitlePanelAlert.Style = UIStyle.Black;
+            UiStyle = UIStyle.Black;
+            //使用StyleManager统一设置控件主题风格
+            uiStyleManager1.Style = UIStyle.Black;
+            //this.Style = UIStyle.Black;
+            //this.uiTitlePanelSmoke.Style = UIStyle.Black;
+            //this.uiTitlePanelFire.Style = UIStyle.Black;
+            //this.uiTitlePanelAlert.Style = UIStyle.Black;
             this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Dark;
             this.uiLineChartFire.ChartStyleType = UIChartStyleType.Dark;
-            this.uiLineChartSmoke.Style = UIStyle.Black;
-            this.uiLineChartFire.Style = UIStyle.Black;
-            this.uiDataGridViewPlace.Style = UIStyle.Black;
-            this.uiContextMenuStrip1.Style = UIStyle.Black;
+            //this.uiLineChartSmoke.Style = UIStyle.Black;
+            //this.uiLineChartFire.Style = UIStyle.Black;
+            //this.uiDataGridViewPlace.Style = UIStyle.Black;
+            //this.uiContextMenuStrip1.Style = UIStyle.Black;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.Black;
         }
         private void toolStripMenuItemLight_Click(object sender, EventArgs e)
         {
-            this.Style = UIStyle.Inherited;
-            this.uiTitlePanelSmoke.Style = UIStyle.Inherited;
-            this.uiTitlePanelFire.Style = UIStyle.Inherited;
-            this.uiTitlePanelAlert.Style = UIStyle.Inherited;
+            UiStyle = UIStyle.Blue;
+            //使用StyleManager统一设置控件主题风格
+            uiStyleManager1.Style = UIStyle.Blue;
+            //this.Style = UIStyle.Blue;
+            //this.uiTitlePanelSmoke.Style = UIStyle.Blue;
+            //this.uiTitlePanelFire.Style = UIStyle.Blue;
+            //this.uiTitlePanelAlert.Style = UIStyle.Blue;
             this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Plain;
             this.uiLineChartFire.ChartStyleType = UIChartStyleType.Plain;
-            this.uiLineChartSmoke.Style = UIStyle.Inherited;
-            this.uiLineChartFire.Style = UIStyle.Inherited;
-            this.uiDataGridViewPlace.Style = UIStyle.Inherited;
-            this.uiContextMenuStrip1.Style = UIStyle.Inherited;
+            //this.uiLineChartSmoke.Style = UIStyle.Blue;
+            //this.uiLineChartFire.Style = UIStyle.Blue;
+            //this.uiDataGridViewPlace.Style = UIStyle.Blue;
+            //this.uiContextMenuStrip1.Style = UIStyle.Blue;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.Inherited;
         }
         private void toolStripMenuItemDefault_Click(object sender, EventArgs e)
         {
-            this.Style = UIStyle.LayuiGreen;
-            this.uiTitlePanelSmoke.Style = UIStyle.LayuiGreen;
-            this.uiTitlePanelFire.Style = UIStyle.LayuiGreen;
-            this.uiTitlePanelAlert.Style = UIStyle.LayuiGreen;
+            UiStyle = UIStyle.LayuiGreen;
+            //使用StyleManager统一设置控件主题风格
+            uiStyleManager1.Style = UIStyle.LayuiGreen;
+            //this.Style = UIStyle.LayuiGreen;
+            //this.uiTitlePanelSmoke.Style = UIStyle.LayuiGreen;
+            //this.uiTitlePanelFire.Style = UIStyle.LayuiGreen;
+            //this.uiTitlePanelAlert.Style = UIStyle.LayuiGreen;
             this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Default;
             this.uiLineChartFire.ChartStyleType = UIChartStyleType.Default;
-            this.uiLineChartSmoke.Style = UIStyle.LayuiGreen;
-            this.uiLineChartFire.Style = UIStyle.LayuiGreen;
-            this.uiDataGridViewPlace.Style = UIStyle.LayuiGreen;
-            this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
+            //this.uiLineChartSmoke.Style = UIStyle.LayuiGreen;
+            //this.uiLineChartFire.Style = UIStyle.LayuiGreen;
+            //this.uiDataGridViewPlace.Style = UIStyle.LayuiGreen;
+            //this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.LayuiGreen;
         }
         private void toolStripMenuItemBlue_Click(object sender, EventArgs e)
         {
-            this.Style = UIStyle.DarkBlue;
-            this.uiTitlePanelSmoke.Style = UIStyle.DarkBlue;
-            this.uiTitlePanelFire.Style = UIStyle.DarkBlue;
-            this.uiTitlePanelAlert.Style = UIStyle.DarkBlue;
+            UiStyle = UIStyle.DarkBlue;
+            //使用StyleManager统一设置控件主题风格
+            uiStyleManager1.Style = UIStyle.DarkBlue; 
+            //this.Style = UIStyle.DarkBlue;
+            //this.uiTitlePanelSmoke.Style = UIStyle.DarkBlue;
+            //this.uiTitlePanelFire.Style = UIStyle.DarkBlue;
+            //this.uiTitlePanelAlert.Style = UIStyle.DarkBlue;
             this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.LiveChart;
             this.uiLineChartFire.ChartStyleType = UIChartStyleType.LiveChart;
-            this.uiLineChartSmoke.Style = UIStyle.DarkBlue;
-            this.uiLineChartFire.Style = UIStyle.DarkBlue;
-            this.uiDataGridViewPlace.Style = UIStyle.DarkBlue;
-            this.uiContextMenuStrip1.Style = UIStyle.DarkBlue;
+            //this.uiLineChartSmoke.Style = UIStyle.DarkBlue;
+            //this.uiLineChartFire.Style = UIStyle.DarkBlue;
+            //this.uiDataGridViewPlace.Style = UIStyle.DarkBlue;
+            //this.uiContextMenuStrip1.Style = UIStyle.DarkBlue;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.DarkBlue;
         }
         private void toolStripMenuItemPurple_Click(object sender, EventArgs e)
         {
-            this.Style = UIStyle.Purple;
-            this.uiTitlePanelSmoke.Style = UIStyle.Purple;
-            this.uiTitlePanelFire.Style = UIStyle.Purple;
-            this.uiTitlePanelAlert.Style = UIStyle.Purple;
+            UiStyle = UIStyle.Purple;
+            //使用StyleManager统一设置控件主题风格
+            uiStyleManager1.Style = UIStyle.Purple;
+            //this.Style = UIStyle.Purple;
+            //this.uiTitlePanelSmoke.Style = UIStyle.Purple;
+            //this.uiTitlePanelFire.Style = UIStyle.Purple;
+            //this.uiTitlePanelAlert.Style = UIStyle.Purple;
             this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Plain;
             this.uiLineChartFire.ChartStyleType = UIChartStyleType.Plain;
-            this.uiLineChartSmoke.Style = UIStyle.Purple;
-            this.uiLineChartFire.Style = UIStyle.Purple;
-            this.uiDataGridViewPlace.Style = UIStyle.Purple;
-            this.uiContextMenuStrip1.Style = UIStyle.Purple;
+            //this.uiLineChartSmoke.Style = UIStyle.Purple;
+            //this.uiLineChartFire.Style = UIStyle.Purple;
+            //this.uiDataGridViewPlace.Style = UIStyle.Purple;
+            //this.uiContextMenuStrip1.Style = UIStyle.Purple;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.Purple;
         }
         private void toolStripMenuItemRed_Click(object sender, EventArgs e)
         {
-            this.Style = UIStyle.Red;
-            this.uiTitlePanelSmoke.Style = UIStyle.Red;
-            this.uiTitlePanelFire.Style = UIStyle.Red;
-            this.uiTitlePanelAlert.Style = UIStyle.Red;
+            UiStyle = UIStyle.Red;
+            //使用StyleManager统一设置控件主题风格
+            uiStyleManager1.Style = UIStyle.Red;
+            //this.Style = UIStyle.Red;
+            //this.uiTitlePanelSmoke.Style = UIStyle.Red;
+            //this.uiTitlePanelFire.Style = UIStyle.Red;
+            //this.uiTitlePanelAlert.Style = UIStyle.Red;
             this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Plain;
             this.uiLineChartFire.ChartStyleType = UIChartStyleType.Plain;
-            this.uiLineChartSmoke.Style = UIStyle.Red;
-            this.uiLineChartFire.Style = UIStyle.Red;
-            this.uiDataGridViewPlace.Style = UIStyle.Red;
-            this.uiContextMenuStrip1.Style = UIStyle.Red;
+            //this.uiLineChartSmoke.Style = UIStyle.Red;
+            //this.uiLineChartFire.Style = UIStyle.Red;
+            //this.uiDataGridViewPlace.Style = UIStyle.Red;
+            //this.uiContextMenuStrip1.Style = UIStyle.Red;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.Red;
         }
         private void toolStripMenuItemOrange_Click(object sender, EventArgs e)
         {
-            this.Style = UIStyle.Orange;
-            this.uiTitlePanelSmoke.Style = UIStyle.Orange;
-            this.uiTitlePanelFire.Style = UIStyle.Orange;
-            this.uiTitlePanelAlert.Style = UIStyle.Orange;
+            UiStyle = UIStyle.Orange;
+            //使用StyleManager统一设置控件主题风格
+            uiStyleManager1.Style = UIStyle.Orange;
+            //this.Style = UIStyle.Orange;
+            //this.uiTitlePanelSmoke.Style = UIStyle.Orange;
+            //this.uiTitlePanelFire.Style = UIStyle.Orange;
+            //this.uiTitlePanelAlert.Style = UIStyle.Orange;
             this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Plain;
             this.uiLineChartFire.ChartStyleType = UIChartStyleType.Plain;
-            this.uiLineChartSmoke.Style = UIStyle.Orange;
-            this.uiLineChartFire.Style = UIStyle.Orange;
-            this.uiDataGridViewPlace.Style = UIStyle.Orange;
-            this.uiContextMenuStrip1.Style = UIStyle.Orange;
+            //this.uiLineChartSmoke.Style = UIStyle.Orange;
+            //this.uiLineChartFire.Style = UIStyle.Orange;
+            //this.uiDataGridViewPlace.Style = UIStyle.Orange;
+            //this.uiContextMenuStrip1.Style = UIStyle.Orange;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.Orange;
         }
         private void toolStripMenuItemGreen_Click(object sender, EventArgs e)
         {
-            this.Style = UIStyle.Green;
-            this.uiTitlePanelSmoke.Style = UIStyle.Green;
-            this.uiTitlePanelFire.Style = UIStyle.Green;
-            this.uiTitlePanelAlert.Style = UIStyle.Green;
+            UiStyle = UIStyle.Green;
+            //使用StyleManager统一设置控件主题风格
+            uiStyleManager1.Style = UIStyle.Green;
+            //this.Style = UIStyle.Green;
+            //this.uiTitlePanelSmoke.Style = UIStyle.Green;
+            //this.uiTitlePanelFire.Style = UIStyle.Green;
+            //this.uiTitlePanelAlert.Style = UIStyle.Green;
             this.uiLineChartSmoke.ChartStyleType = UIChartStyleType.Plain;
             this.uiLineChartFire.ChartStyleType = UIChartStyleType.Plain;
-            this.uiLineChartSmoke.Style = UIStyle.Green;
-            this.uiLineChartFire.Style = UIStyle.Green;
-            this.uiDataGridViewPlace.Style = UIStyle.Green;
-            this.uiContextMenuStrip1.Style = UIStyle.Green;
+            //this.uiLineChartSmoke.Style = UIStyle.Green;
+            //this.uiLineChartFire.Style = UIStyle.Green;
+            //this.uiDataGridViewPlace.Style = UIStyle.Green;
+            //this.uiContextMenuStrip1.Style = UIStyle.Green;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
-            UiStyle = UIStyle.Green;
         }
 
         private void toolStripMenuItemMqtt_Click(object sender, EventArgs e)

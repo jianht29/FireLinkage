@@ -79,6 +79,7 @@
             this.toolStripMenuItemMqtt = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItemThreshold = new System.Windows.Forms.ToolStripMenuItem();
             this.timer2 = new System.Windows.Forms.Timer(this.components);
+            this.uiStyleManager1 = new Sunny.UI.UIStyleManager(this.components);
             this.uiTitlePanelSmoke.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -610,90 +611,90 @@
             this.toolStripMenuItemMqtt,
             this.toolStripMenuItemThreshold});
             this.uiContextMenuStrip1.Name = "uiContextMenuStrip1";
-            this.uiContextMenuStrip1.Size = new System.Drawing.Size(243, 242);
+            this.uiContextMenuStrip1.Size = new System.Drawing.Size(333, 322);
             // 
             // toolStripMenuItemDefault
             // 
             this.toolStripMenuItemDefault.Name = "toolStripMenuItemDefault";
-            this.toolStripMenuItemDefault.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemDefault.Size = new System.Drawing.Size(332, 30);
             this.toolStripMenuItemDefault.Text = "默认主题（DarkGreen）";
             this.toolStripMenuItemDefault.Click += new System.EventHandler(this.toolStripMenuItemDefault_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(239, 6);
+            this.toolStripSeparator1.Size = new System.Drawing.Size(329, 6);
             // 
             // toolStripMenuItemLight
             // 
             this.toolStripMenuItemLight.Name = "toolStripMenuItemLight";
-            this.toolStripMenuItemLight.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemLight.Size = new System.Drawing.Size(332, 30);
             this.toolStripMenuItemLight.Text = "浅蓝主题（LightBlue）";
             this.toolStripMenuItemLight.Click += new System.EventHandler(this.toolStripMenuItemLight_Click);
             // 
             // toolStripMenuItemBlue
             // 
             this.toolStripMenuItemBlue.Name = "toolStripMenuItemBlue";
-            this.toolStripMenuItemBlue.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemBlue.Size = new System.Drawing.Size(332, 30);
             this.toolStripMenuItemBlue.Text = "深蓝主题（DarkBlue）";
             this.toolStripMenuItemBlue.Click += new System.EventHandler(this.toolStripMenuItemBlue_Click);
             // 
             // toolStripMenuItemDark
             // 
             this.toolStripMenuItemDark.Name = "toolStripMenuItemDark";
-            this.toolStripMenuItemDark.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemDark.Size = new System.Drawing.Size(332, 30);
             this.toolStripMenuItemDark.Text = "黑色主题（Black）";
             this.toolStripMenuItemDark.Click += new System.EventHandler(this.toolStripMenuItemDark_Click);
             // 
             // toolStripSeparator2
             // 
             this.toolStripSeparator2.Name = "toolStripSeparator2";
-            this.toolStripSeparator2.Size = new System.Drawing.Size(239, 6);
+            this.toolStripSeparator2.Size = new System.Drawing.Size(329, 6);
             // 
             // toolStripMenuItemRed
             // 
             this.toolStripMenuItemRed.Name = "toolStripMenuItemRed";
-            this.toolStripMenuItemRed.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemRed.Size = new System.Drawing.Size(332, 30);
             this.toolStripMenuItemRed.Text = "红色主题（Red）";
             this.toolStripMenuItemRed.Click += new System.EventHandler(this.toolStripMenuItemRed_Click);
             // 
             // toolStripMenuItemGreen
             // 
             this.toolStripMenuItemGreen.Name = "toolStripMenuItemGreen";
-            this.toolStripMenuItemGreen.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemGreen.Size = new System.Drawing.Size(332, 30);
             this.toolStripMenuItemGreen.Text = "绿色主题（Green）";
             this.toolStripMenuItemGreen.Click += new System.EventHandler(this.toolStripMenuItemGreen_Click);
             // 
             // toolStripMenuItemPurple
             // 
             this.toolStripMenuItemPurple.Name = "toolStripMenuItemPurple";
-            this.toolStripMenuItemPurple.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemPurple.Size = new System.Drawing.Size(332, 30);
             this.toolStripMenuItemPurple.Text = "紫色主题（Purple）";
             this.toolStripMenuItemPurple.Click += new System.EventHandler(this.toolStripMenuItemPurple_Click);
             // 
             // toolStripMenuItemOrange
             // 
             this.toolStripMenuItemOrange.Name = "toolStripMenuItemOrange";
-            this.toolStripMenuItemOrange.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemOrange.Size = new System.Drawing.Size(332, 30);
             this.toolStripMenuItemOrange.Text = "橙色主题（Orange）";
             this.toolStripMenuItemOrange.Click += new System.EventHandler(this.toolStripMenuItemOrange_Click);
             // 
             // toolStripSeparator3
             // 
             this.toolStripSeparator3.Name = "toolStripSeparator3";
-            this.toolStripSeparator3.Size = new System.Drawing.Size(239, 6);
+            this.toolStripSeparator3.Size = new System.Drawing.Size(329, 6);
             // 
             // toolStripMenuItemMqtt
             // 
             this.toolStripMenuItemMqtt.Name = "toolStripMenuItemMqtt";
-            this.toolStripMenuItemMqtt.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemMqtt.Size = new System.Drawing.Size(332, 30);
             this.toolStripMenuItemMqtt.Text = "连接MQTT服务器";
             this.toolStripMenuItemMqtt.Click += new System.EventHandler(this.toolStripMenuItemMqtt_Click);
             // 
             // toolStripMenuItemThreshold
             // 
             this.toolStripMenuItemThreshold.Name = "toolStripMenuItemThreshold";
-            this.toolStripMenuItemThreshold.Size = new System.Drawing.Size(242, 22);
+            this.toolStripMenuItemThreshold.Size = new System.Drawing.Size(332, 30);
             this.toolStripMenuItemThreshold.Text = "设置报警的阈值";
             this.toolStripMenuItemThreshold.Click += new System.EventHandler(this.toolStripMenuItemThreshold_Click);
             // 
@@ -793,5 +794,6 @@
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemMqtt;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItemThreshold;
         private System.Windows.Forms.Timer timer2;
+        private Sunny.UI.UIStyleManager uiStyleManager1;
     }
 }
