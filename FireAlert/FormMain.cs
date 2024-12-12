@@ -414,6 +414,14 @@ namespace FireAlert
             //this.uiLineChartSmoke.Refresh();
             //this.uiLineChartFire.Refresh();
 
+            this.uiProcessBarSmoke1.Style = UIStyle.Blue;
+            this.uiProcessBarSmoke2.Style = UIStyle.Red;
+            this.uiProcessBarSmoke3.Style = UIStyle.Green;
+
+            this.uiProcessBarFire1.Style = UIStyle.Blue;
+            this.uiProcessBarFire2.Style = UIStyle.Red;
+            this.uiProcessBarFire3.Style = UIStyle.Green;
+
             // 建议使用SIoT1.3作为MQTT服务器进行测试
             // 使用手册：https://siot.readthedocs.io/zh-cn/latest/
             // Gitee：https://gitee.com/vvlink/SIoT
@@ -461,6 +469,14 @@ namespace FireAlert
             //this.uiContextMenuStrip1.Style = UIStyle.Black;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
+
+            this.uiProcessBarSmoke1.Style = UIStyle.Blue;
+            this.uiProcessBarSmoke2.Style = UIStyle.Red;
+            this.uiProcessBarSmoke3.Style = UIStyle.Green;
+
+            this.uiProcessBarFire1.Style = UIStyle.Blue;
+            this.uiProcessBarFire2.Style = UIStyle.Red;
+            this.uiProcessBarFire3.Style = UIStyle.Green;
         }
         private void toolStripMenuItemLight_Click(object sender, EventArgs e)
         {
@@ -479,6 +495,14 @@ namespace FireAlert
             //this.uiContextMenuStrip1.Style = UIStyle.Blue;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
+
+            this.uiProcessBarSmoke1.Style = UIStyle.Blue;
+            this.uiProcessBarSmoke2.Style = UIStyle.Red;
+            this.uiProcessBarSmoke3.Style = UIStyle.Green;
+
+            this.uiProcessBarFire1.Style = UIStyle.Blue;
+            this.uiProcessBarFire2.Style = UIStyle.Red;
+            this.uiProcessBarFire3.Style = UIStyle.Green;
         }
         private void toolStripMenuItemDefault_Click(object sender, EventArgs e)
         {
@@ -497,6 +521,14 @@ namespace FireAlert
             //this.uiContextMenuStrip1.Style = UIStyle.LayuiGreen;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
+
+            this.uiProcessBarSmoke1.Style = UIStyle.Blue;
+            this.uiProcessBarSmoke2.Style = UIStyle.Red;
+            this.uiProcessBarSmoke3.Style = UIStyle.Green;
+
+            this.uiProcessBarFire1.Style = UIStyle.Blue;
+            this.uiProcessBarFire2.Style = UIStyle.Red;
+            this.uiProcessBarFire3.Style = UIStyle.Green;
         }
         private void toolStripMenuItemBlue_Click(object sender, EventArgs e)
         {
@@ -515,6 +547,14 @@ namespace FireAlert
             //this.uiContextMenuStrip1.Style = UIStyle.DarkBlue;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
+
+            this.uiProcessBarSmoke1.Style = UIStyle.Blue;
+            this.uiProcessBarSmoke2.Style = UIStyle.Red;
+            this.uiProcessBarSmoke3.Style = UIStyle.Green;
+
+            this.uiProcessBarFire1.Style = UIStyle.Blue;
+            this.uiProcessBarFire2.Style = UIStyle.Red;
+            this.uiProcessBarFire3.Style = UIStyle.Green;
         }
         private void toolStripMenuItemPurple_Click(object sender, EventArgs e)
         {
@@ -533,6 +573,14 @@ namespace FireAlert
             //this.uiContextMenuStrip1.Style = UIStyle.Purple;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
+
+            this.uiProcessBarSmoke1.Style = UIStyle.Blue;
+            this.uiProcessBarSmoke2.Style = UIStyle.Red;
+            this.uiProcessBarSmoke3.Style = UIStyle.Green;
+
+            this.uiProcessBarFire1.Style = UIStyle.Blue;
+            this.uiProcessBarFire2.Style = UIStyle.Red;
+            this.uiProcessBarFire3.Style = UIStyle.Green;
         }
         private void toolStripMenuItemRed_Click(object sender, EventArgs e)
         {
@@ -551,6 +599,14 @@ namespace FireAlert
             //this.uiContextMenuStrip1.Style = UIStyle.Red;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
+
+            this.uiProcessBarSmoke1.Style = UIStyle.Blue;
+            this.uiProcessBarSmoke2.Style = UIStyle.Red;
+            this.uiProcessBarSmoke3.Style = UIStyle.Green;
+
+            this.uiProcessBarFire1.Style = UIStyle.Blue;
+            this.uiProcessBarFire2.Style = UIStyle.Red;
+            this.uiProcessBarFire3.Style = UIStyle.Green;
         }
         private void toolStripMenuItemOrange_Click(object sender, EventArgs e)
         {
@@ -569,6 +625,14 @@ namespace FireAlert
             //this.uiContextMenuStrip1.Style = UIStyle.Orange;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
+
+            this.uiProcessBarSmoke1.Style = UIStyle.Blue;
+            this.uiProcessBarSmoke2.Style = UIStyle.Red;
+            this.uiProcessBarSmoke3.Style = UIStyle.Green;
+
+            this.uiProcessBarFire1.Style = UIStyle.Blue;
+            this.uiProcessBarFire2.Style = UIStyle.Red;
+            this.uiProcessBarFire3.Style = UIStyle.Green;
         }
         private void toolStripMenuItemGreen_Click(object sender, EventArgs e)
         {
@@ -587,6 +651,14 @@ namespace FireAlert
             //this.uiContextMenuStrip1.Style = UIStyle.Green;
             this.uiLineChartSmoke.Refresh();
             this.uiLineChartFire.Refresh();
+
+            this.uiProcessBarSmoke1.Style = UIStyle.Blue;
+            this.uiProcessBarSmoke2.Style = UIStyle.Red;
+            this.uiProcessBarSmoke3.Style = UIStyle.Green;
+
+            this.uiProcessBarFire1.Style = UIStyle.Blue;
+            this.uiProcessBarFire2.Style = UIStyle.Red;
+            this.uiProcessBarFire3.Style = UIStyle.Green;
         }
 
         private void toolStripMenuItemMqtt_Click(object sender, EventArgs e)
